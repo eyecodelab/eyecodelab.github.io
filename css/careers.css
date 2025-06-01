@@ -31,12 +31,20 @@ body{
     position: fixed;
 }
 
-.header .logo img{
+/* .header .logo img{
     width: 20%;
     height: 3rem;
     top: 0;
     left: 0;
+} */
+
+.header .logo img {
+    width: 130%;
+    height: 3rem;
+    top: 0;
+    left: 0;
 }
+
 
 .header .navbar ul{
     list-style-type: none;
