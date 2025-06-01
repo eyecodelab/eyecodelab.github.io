@@ -663,4 +663,42 @@ body{
         color: #aaa;
         font-size: 1.5rem;
     }
+
+    #pricing-table {
+  font-size: 1.625rem; /* ~26px */
 }
+
+#pricing-table h2 {
+  font-size: 3.2rem; /* ~51px */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #001b44;
+}
+
+#pricing-table th {
+  font-size: 1.75rem;  /* ~28px */
+  padding: 32px 20px;
+}
+
+#pricing-table th strong {
+  font-size: 2.3rem;   /* ~36px */
+  display: block;
+  margin-top: 10px;
+}
+
+#pricing-table td {
+  font-size: 1.6rem;   /* ~26px */
+  padding: 26px 20px;
+}
+
+#pricing-table .btn {
+  font-size: 1.4rem;   /* ~22px */
+  padding: 12px 32px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+
+}
+
+
