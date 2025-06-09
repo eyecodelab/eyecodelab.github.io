@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EyeCode | AI & Smart Tech Hub</title>
     <link rel="stylesheet" href="./css/careers.css">
+    <link rel="stylesheet" href="./css/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="./images/fav-eyecode.ico">
@@ -19,63 +20,7 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <script src="./js/main.js"></script>
 
-    <style>
-        body {
-            background-color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        .home {
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f8f8f8;
-            border-radius: 8px;
-        }
-        .career-heading {
-            text-align: center;
-            margin-bottom: 20px;
-        }z
-        .career-heading p {
-            font-size: 18px;
-            color: #555;
-        }
-        .blog-container {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-        .blog-links {
-            width: 100%;
-            text-align: left;
-            padding: 30px;
-        }
-        .blog-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .blog-links li {
-            margin: 10px 0;
-        }
-        .blog-links a {
-            text-decoration: none;
-            color: blue;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
-        .blog-links a:hover {
-            text-decoration: underline;
-            color: darkblue;
-        }
-        .logo img {
-            height: 48px;         
-            width: auto;          
-            object-fit: contain;   
-            display: block;
-        }
-    </style>
+    
 </head>
 <body>
     <header class="header">
@@ -83,18 +28,23 @@
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html#home">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <li><a href="price.html">Price</a></li>
-
-                <li><a href="careers.html">career</a></li>
-                <li><a href="blog.html">Blog Công Nghệ</a></li>
-
-                <li><a href="index.html#contact">contact</a></li>
-                <!-- <li><a href="index.html#faq">FAQ</a></li> -->
+                <li><a href="index.html#home" data-i18n="home">home</a></li>
+                <li><a href="index.html#about" data-i18n="about">about</a></li>
+                <li><a href="index.html#service" data-i18n="services">services</a></li>
+                <li><a href="price.html" data-i18n="price">Price</a></li>
+                <li><a href="careers.html" data-i18n="careers">career</a></li>
+                <li><a href="blog.html" data-i18n="blog">Blog Công Nghệ</a></li>
+                <li><a href="index.html#contact" data-i18n="contact">contact</a></li>
             </ul>
-
+            <div class="dropdown ml-3">
+                <button class="btn btn-outline-primary dropdown-toggle lang-switcher" type="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i> <span id="lang-current">VI</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('vi')">VI</a>
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -102,25 +52,23 @@
         <h2>Home &raquo; Blog Công Nghệ </h2>
     </section>
 
-    <section id="career-heading" class="career-heading">
-        <h1 class="heading">Blog Công Nghệ </h1>
-
+     <section id="career-heading" class="career-heading">
+        <h1 class="heading" data-i18n="blog-title">Blog Công Nghệ</h1>
     </section>
-    
-    <section class="career-heading" style="max-width: 900px; margin: 0 auto; text-align: justify; padding: 10px 30px 30px;">
 
-        <p>
-            Khám phá các dự án công nghệ sáng tạo do thực tập sinh tại <strong>EyeCode</strong> thực hiện trong các lĩnh vực:
+    <section class="career-heading" style="max-width: 900px; margin: 0 auto; text-align: justify; padding: 10px 30px 30px;">
+        <p data-i18n="blog-desc">
+        Khám phá các dự án công nghệ sáng tạo do thực tập sinh tại <strong>EyeCode</strong> thực hiện trong các lĩnh vực:
         </p>
         <ul style="line-height: 2.5rem; font-size: 1.4rem; list-style: none; padding-left: 0;">
-            <li>📘 <strong>AI & Machine Learning</strong></li>
-            <li>📱 <strong>Mobile App Development</strong></li>
-            <li>💻 <strong>Web Application</strong></li>
-            <li>🤖 <strong>Robotics & IoT</strong></li>
+        <li>📘 <strong data-i18n="blog-cat-ai">AI & Machine Learning</strong></li>
+        <li>📱 <strong data-i18n="blog-cat-mobile">Mobile App Development</strong></li>
+        <li>💻 <strong data-i18n="blog-cat-web">Web Application</strong></li>
+        <li>🤖 <strong data-i18n="blog-cat-robot">Robotics & IoT</strong></li>
         </ul>
         
-        <p>
-            Mỗi năm, EyeCode đồng hành cùng hàng chục sinh viên trên toàn quốc qua các dự án thực tế, kết hợp mentoring để phát triển kỹ năng chuyên môn và định hướng sự nghiệp phù hợp với thế mạnh của từng cá nhân.
+        <p data-i18n="blog-paragraph-2">
+        Mỗi năm, EyeCode đồng hành cùng hàng chục sinh viên trên toàn quốc qua các dự án thực tế, kết hợp mentoring để phát triển kỹ năng chuyên môn và định hướng sự nghiệp phù hợp với thế mạnh của từng cá nhân.
         </p>
         
         
@@ -128,95 +76,21 @@
     
 
     <div class="blog-links">
-        <h2>Một Số Dự Án Nổi Bật Gần Đây Về AI, Web, Mobile App & Robotics:</h2>
+    <h2 data-i18n="blog-section-title">Một Số Dự Án Nổi Bật Gần Đây Về AI, Web, Mobile App & Robotics:</h2>
         <ul>
-
-            <li>
-                <a>Đếm Người Trong Thị Giác Máy Tính – Những Khó Khăn và Giải Pháp</a>
-                <br><medium style="color: #007bff;"> 
-                  Thực hiện bởi Nguyễn Phương Nhật Hiền, ngành Điện tử Viễn thông, trường đại học KHTN tp. HCM            
-              </medium>
-              </li>
-
-            <li>
-              <a>Đếm Động Vật Bằng Thị Giác Máy Tính – Thách Thức và Giải Pháp</a>
-              <br><medium style="color: #007bff;"> 
-                Thực hiện bởi Nguyễn Sĩ Luân, ngành Khoa Học Dữ Liệu, Trường đại học Ngoại Ngữ - Tin Học Tp. HCM (HUFLIT)            
-            </medium>
-            </li>
-          
-
-          
-            <li>
-              <a>Ứng Dụng AI Cải Thiện Chất Lượng Hình Ảnh Trên Mobile</a>
-              <br><medium style="color: #007bff;"> 
-                Thực hiện bởi Châu Thiên Long (Khoa học máy tính – ĐH CNTT TP.HCM) và Đỗ Hữu Khang (CNTT – ĐH Giao thông Vận tải TP.HCM)            </medium>
-                    </li>
-          
-            <li>
-              <a>Tối Ưu Deep Learning Trên Thiết Bị Hạn Chế Tài Nguyên</a>
-              <br><medium style="color: #007bff;"> 
-                Thực hiện bởi Phan Bình, ngành khoa học Dữ Liệu và Trí tuệ nhân tạo, trường đại học Bách khoa Đà Nẵng            
-            </medium>            
-        </li>
-          
-            <li>
-              <a>Ứng dụng Reinforcement Learning trong huấn luyện robot chó di chuyển thông minh</a>
-              <br><medium style="color: #007bff;"> 
-                Thực hiện bởi Trịnh Anh Tuấn, ngành Cơ Điện Tử, đại học quốc gia Hà Nội           
-            </medium>
-             </li>
-
-             <li>
-                <a>Ứng dụng Reinforcement Learning trong huấn luyện robot hình người</a>
-                <br><medium style="color: #007bff;"> 
-                  Thực hiện bởi Ngô Hà Anh Thư, ngành Khoa học máy tính, đại học bách khoa Hà Nội           
-              </medium>
-               </li>
-
-                <li>
-                <a>Ứng dụng Large Language Model (LLM) trong chấm điểm kỹ năng Nói tiếng anh </a>
-                <br><medium style="color: #007bff;"> 
-                    Thực hiện bởi Nguyễn Thọ Quang, ngành Khoa học máy tính – trường đại học CNTT TP.HCM            
-                </medium>
-                </li>
-
-                <li>
-                    <a>Ứng dụng Large Language Model (LLM) và RAG trong chấm điểm kỹ năng viết tiếng Anh</a>
-                    <br>
-                    <medium style="color: #007bff;">
-                        Thực hiện bởi: Lê Phú Trường (Ngành Khoa học Máy tính – Trường Đại học Khoa học Tự nhiên TP.HCM), Châu Thiên Long (Ngành Khoa học Máy tính – Trường Đại học Công nghệ Thông tin TP.HCM)
-                    </medium>
-                </li>
-                
-
-                <li>
-                    <a>Kính Thông Minh Tích Hợp AI Dẫn Đường Hỗ Trợ Người Khiếm Thị</a>
-                    <br><medium style="color: #007bff;"> 
-                      Thực hiện bởi Phan Bình, ngành khoa học Dữ Liệu và Trí tuệ nhân tạo, trường đại học Bách khoa Đà Nẵng            
-                  </medium>            
-              </li>
-
-              <li>
-                <a>Nền tảng học tập trực tuyến ứng dụng trí tuệ nhân tạo</a>
-                <br><medium style="color: #007bff;"> 
-                  Phát triển bởi team UI/UX, Web và AI tại Eyecode – Hệ thống hỗ trợ người học thông qua công nghệ trí tuệ nhân tạo, giúp cá nhân hóa và nâng cao hiệu quả học tập trực tuyến.        
-                </medium>
-              </li>
-
-              <li>
-                <a>Tạo nhân vật ảo biết nói bằng trí tuệ nhân tạo từ hình ảnh 2D và giọng nói</a>
-                <br><medium style="color: #007bff;"> 
-                  Thực hiện bởi Hồ Quốc Nhân Hoà, ngành Khoa học máy tính – trường đại học khoa học tự nhiên TP.HCM  – Phát triển hệ thống chuyển đổi ảnh tĩnh và âm thanh thành avatar động đồng bộ khẩu hình và biểu cảm.          
-                </medium>
-              </li>
-
-              
-
-          </ul>
-          
-
-    </div>
+        <li><a data-i18n="blog-1-title">Đếm Người Trong Thị Giác Máy Tính – Những Khó Khăn và Giải Pháp</a><br><medium style="color: #007bff;" data-i18n="blog-1-author">Thực hiện bởi Nguyễn Phương Nhật Hiền, ngành Điện tử Viễn thông, trường đại học KHTN tp. HCM</medium></li>
+        <li><a data-i18n="blog-2-title">Đếm Động Vật Bằng Thị Giác Máy Tính – Thách Thức và Giải Pháp</a><br><medium style="color: #007bff;" data-i18n="blog-2-author">Thực hiện bởi Nguyễn Sĩ Luân, ngành Khoa Học Dữ Liệu, Trường đại học HUFLIT</medium></li>
+        <li><a data-i18n="blog-3-title">Ứng Dụng AI Cải Thiện Chất Lượng Hình Ảnh Trên Mobile</a><br><medium style="color: #007bff;" data-i18n="blog-3-author">Châu Thiên Long (ĐH CNTT TP.HCM) và Đỗ Hữu Khang (ĐH GTVT TP.HCM)</medium></li>
+        <li><a data-i18n="blog-4-title">Tối Ưu Deep Learning Trên Thiết Bị Hạn Chế Tài Nguyên</a><br><medium style="color: #007bff;" data-i18n="blog-4-author">Phan Bình, đại học Bách khoa Đà Nẵng</medium></li>
+        <li><a data-i18n="blog-5-title">Ứng dụng Reinforcement Learning cho robot chó di chuyển</a><br><medium style="color: #007bff;" data-i18n="blog-5-author">Trịnh Anh Tuấn, đại học quốc gia Hà Nội</medium></li>
+        <li><a data-i18n="blog-6-title">Ứng dụng Reinforcement Learning cho robot hình người</a><br><medium style="color: #007bff;" data-i18n="blog-6-author">Ngô Hà Anh Thư, đại học bách khoa Hà Nội</medium></li>
+        <li><a data-i18n="blog-7-title">Ứng dụng LLM trong chấm điểm kỹ năng Nói tiếng Anh</a><br><medium style="color: #007bff;" data-i18n="blog-7-author">Nguyễn Thọ Quang, ĐH CNTT TP.HCM</medium></li>
+        <li><a data-i18n="blog-8-title">LLM + RAG trong chấm điểm kỹ năng viết tiếng Anh</a><br><medium style="color: #007bff;" data-i18n="blog-8-author">Lê Phú Trường & Châu Thiên Long – ĐH KHTN TP.HCM & ĐH CNTT TP.HCM</medium></li>
+        <li><a data-i18n="blog-9-title">Kính Thông Minh Tích Hợp AI cho Người Khiếm Thị</a><br><medium style="color: #007bff;" data-i18n="blog-9-author">Phan Bình, đại học Bách khoa Đà Nẵng</medium></li>
+        <li><a data-i18n="blog-10-title">Nền tảng học tập trực tuyến ứng dụng AI</a><br><medium style="color: #007bff;" data-i18n="blog-10-author">Team UI/UX, Web & AI tại Eyecode</medium></li>
+        <li><a data-i18n="blog-11-title">Tạo nhân vật ảo biết nói bằng AI từ ảnh 2D & giọng nói</a><br><medium style="color: #007bff;" data-i18n="blog-11-author">Hồ Quốc Nhân Hoà, ĐH KHTN TP.HCM</medium></li>
+        </ul>
+  </div>
 
     <div class="footer">
         <div class="footer-top">
@@ -302,7 +176,124 @@
     </div>
 
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+    <script>
+    const translations = {
+      en: {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Our Services",
+        "price": "Price",
+        "careers": "Careers",
+        "blog": "Technology Blog",
+        "contact": "Contact",
+        "home-section": "Home / Technology Blog",
+        "blog-title": "Technology Blog",
+        "blog-desc": "Discover innovative tech projects by EyeCode interns in:",
+        "blog-cat-ai": "AI & Machine Learning",
+        "blog-cat-mobile": "Mobile App Development",
+        "blog-cat-web": "Web Application",
+        "blog-cat-robot": "Robotics & IoT",
+        "blog-paragraph-2": "Each year, EyeCode collaborates with dozens of students nationwide through real-world projects and mentoring to develop professional skills and guide career paths based on individual strengths.",
+        "blog-section-title": "Highlighted Projects in AI, Web, Mobile App & Robotics:",
+        "blog-1-title": "People Counting in Computer Vision – Challenges and Solutions",
+        "blog-1-author": "By Nguyen Phuong Nhat Hien, Electronics & Telecommunications – VNUHCM-US",
+        "blog-2-title": "Animal Counting using Computer Vision – Challenges and Solutions",
+        "blog-2-author": "By Nguyen Si Luan, Data Science – HUFLIT",
+        "blog-3-title": "AI for Enhancing Image Quality on Mobile",
+        "blog-3-author": "By Chau Thien Long (UIT HCM) & Do Huu Khang (UTC HCM)",
+        "blog-4-title": "Optimizing Deep Learning on Resource-Constrained Devices",
+        "blog-4-author": "By Phan Binh – Danang University of Science and Technology",
+        "blog-5-title": "Reinforcement Learning for Smart Dog Robots",
+        "blog-5-author": "By Trinh Anh Tuan – Vietnam National University Hanoi",
+        "blog-6-title": "Reinforcement Learning for Humanoid Robots",
+        "blog-6-author": "By Ngo Ha Anh Thu – Hanoi University of Science and Technology",
+        "blog-7-title": "Using LLM to Assess English Speaking Skills",
+        "blog-7-author": "By Nguyen Tho Quang – UIT HCM",
+        "blog-8-title": "LLM + RAG for Assessing English Writing Skills",
+        "blog-8-author": "By Le Phu Truong & Chau Thien Long – VNUHCM-US & UIT",
+        "blog-9-title": "AI Smart Glasses to Assist the Visually Impaired",
+        "blog-9-author": "By Phan Binh – Danang University of Science and Technology",
+        "blog-10-title": "AI-powered Online Learning Platform",
+        "blog-10-author": "By the UI/UX, Web & AI Team at EyeCode",
+        "blog-11-title": "Talking Avatar from 2D Image and Voice using AI",
+        "blog-11-author": "By Ho Quoc Nhan Hoa – VNUHCM-US"
+      },
+      vi: {
+        "home": "Trang chủ",
+        "about": "Về chúng tôi",
+        "services": "Dịch vụ",
+        "price": "Bảng giá",
+        "careers": "Cơ hội nghề nghiệp",
+        "blog": "Blog Công Nghệ",
+        "contact": "Liên hệ",
+        "home-section": "Trang chủ / Blog Công Nghệ",
+        "blog-title": "Blog Công Nghệ",
+        "blog-desc": "Khám phá các dự án công nghệ sáng tạo do thực tập sinh tại EyeCode thực hiện trong các lĩnh vực:",
+        "blog-cat-ai": "AI & Machine Learning",
+        "blog-cat-mobile": "Phát triển ứng dụng di động",
+        "blog-cat-web": "Ứng dụng Web",
+        "blog-cat-robot": "Robotics & IoT",
+        "blog-paragraph-2": "Mỗi năm, EyeCode đồng hành cùng hàng chục sinh viên trên toàn quốc qua các dự án thực tế, kết hợp mentoring để phát triển kỹ năng chuyên môn và định hướng sự nghiệp phù hợp với thế mạnh của từng cá nhân.",
+        "blog-section-title": "Một Số Dự Án Nổi Bật Gần Đây Về AI, Web, Mobile App & Robotics:",
+        "blog-1-title": "Đếm Người Trong Thị Giác Máy Tính – Những Khó Khăn và Giải Pháp",
+        "blog-1-author": "Thực hiện bởi Nguyễn Phương Nhật Hiền, ngành Điện tử Viễn thông, trường đại học KHTN tp. HCM",
+        "blog-2-title": "Đếm Động Vật Bằng Thị Giác Máy Tính – Thách Thức và Giải Pháp",
+        "blog-2-author": "Thực hiện bởi Nguyễn Sĩ Luân, ngành Khoa Học Dữ Liệu, Trường đại học HUFLIT",
+        "blog-3-title": "Ứng Dụng AI Cải Thiện Chất Lượng Hình Ảnh Trên Mobile",
+        "blog-3-author": "Châu Thiên Long (ĐH CNTT TP.HCM) và Đỗ Hữu Khang (ĐH GTVT TP.HCM)",
+        "blog-4-title": "Tối Ưu Deep Learning Trên Thiết Bị Hạn Chế Tài Nguyên",
+        "blog-4-author": "Phan Bình, đại học Bách khoa Đà Nẵng",
+        "blog-5-title": "Ứng dụng Reinforcement Learning cho robot chó di chuyển",
+        "blog-5-author": "Trịnh Anh Tuấn, đại học quốc gia Hà Nội",
+        "blog-6-title": "Ứng dụng Reinforcement Learning cho robot hình người",
+        "blog-6-author": "Ngô Hà Anh Thư, đại học bách khoa Hà Nội",
+        "blog-7-title": "Ứng dụng LLM trong chấm điểm kỹ năng Nói tiếng Anh",
+        "blog-7-author": "Nguyễn Thọ Quang, ĐH CNTT TP.HCM",
+        "blog-8-title": "LLM + RAG trong chấm điểm kỹ năng viết tiếng Anh",
+        "blog-8-author": "Lê Phú Trường & Châu Thiên Long – ĐH KHTN TP.HCM & ĐH CNTT TP.HCM",
+        "blog-9-title": "Kính Thông Minh Tích Hợp AI cho Người Khiếm Thị",
+        "blog-9-author": "Phan Bình, đại học Bách khoa Đà Nẵng",
+        "blog-10-title": "Nền tảng học tập trực tuyến ứng dụng AI",
+        "blog-10-author": "Team UI/UX, Web & AI tại Eyecode",
+        "blog-11-title": "Tạo nhân vật ảo biết nói bằng AI từ ảnh 2D & giọng nói",
+        "blog-11-author": "Hồ Quốc Nhân Hoà, ĐH KHTN TP.HCM"
+      }
+    };
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang); 
+        changeLanguage(lang);
+    }
 
+    function changeLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                el.innerText = translations[lang][key];
+            }
+        });
+
+    
+        const langDisplay = document.getElementById('lang-current');
+        if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+    }
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = localStorage.getItem('language') || 'vi'; 
+    changeLanguage(savedLang);
+    
+    const langDisplay = document.getElementById('lang-current');
+    if (langDisplay) langDisplay.innerText = savedLang.toUpperCase();
+
+    const langOptions = document.querySelectorAll('.dropdown-item');
+    langOptions.forEach(option => {
+        if (option.textContent.trim().toLowerCase() === savedLang.toLowerCase()) {
+            option.classList.add('active');
+        }
+    });
+});
+    </script>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -311,6 +302,10 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
+    <div class="floating-contact">
+        <a href="https://wa.me/6598975989" class="fc-icon whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://m.me/61565185437108" class="fc-icon messenger" target="_blank" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="http://zaloapp.com/qr/p/9by4ludjkof2" class="fc-icon zalo" target="_blank" title="Zalo"><img src="https://chat.zalo.me/favicon.ico" alt="Zalo" /></a>
+    </div>
 </body>
 </html>

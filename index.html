@@ -14,6 +14,7 @@
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="./images/fav-eyecode.ico">
@@ -26,29 +27,6 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <script src="./js/main.js"></script>
-    <style>
-        .logo img {
-        height: 48px;         
-        width: auto;          
-        object-fit: contain;   
-        display: block;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            border-radius: 25px;
-            padding: 10px 15px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-        }
-
-        .contact-form button {
-            border-radius: 25px;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -56,87 +34,87 @@
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <!-- <li><a href="#home">home</a></li> -->
-                <li><a href="#">home</a></li>
-
-                <li><a href="#about">about</a></li>
-                <li><a href="#service">services</a></li>
-                <li><a href="price.html">Price</a></li>
-
-                <!-- <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#team">team</a></li> -->
-                <li><a href="careers.html">career</a></li>
-                <li><a href="blog.html">Blog Công Nghệ</a></li>
-
-                <li><a href="#contact">contact</a></li>
-                <!-- <li><a href="#faq">FAQ</a></li> -->
+                <li><a href="index.html#home" data-i18n="home">home</a></li>
+                <li><a href="index.html#about" data-i18n="about">about</a></li>
+                <li><a href="index.html#service" data-i18n="services">services</a></li>
+                <li><a href="price.html" data-i18n="price">Price</a></li>
+                <li><a href="careers.html" data-i18n="careers">career</a></li>
+                <li><a href="blog.html" data-i18n="blog">Blog Công Nghệ</a></li>
+                <li><a href="index.html#contact" data-i18n="contact">contact</a></li>
             </ul>
+            <div class="dropdown ml-3">
+                <button class="btn btn-outline-primary dropdown-toggle lang-switcher" type="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i> <span id="lang-current">VI</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('vi')">VI</a>
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a>
+                </div>
+            </div>
         </nav>
     </header>
 
   <section id="home" class="home">
-    <h1>Enhance Your Life with AI-Powered Solutions</h1>
-    <h2>Brought to You by EyeCode Company Services</h2>    
+    <h1 data-i18n="home-title">Enhance Your Life with AI-Powered Solutions</h1>
+    <h2 data-i18n="home-sub">Brought to You by EyeCode Company Services</h2>  
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
   </section>
 
   <section id="about" class="about">
-    <h1 class="heading">about us</h1>
+    <h1 class="heading" data-i18n="about-title">about us</h1>
     <div class="row">
-        <div class="content">
-            <h3>We make technology work for you!</h3>
-            <p>Our team of tech experts is constantly innovating, <b>all. the. time.</b><br>
-                By combining our skills in AI, web development, and mobile apps, we deliver powerful solutions that solve complex problems and elevate your business.</p>
-            <a href="#"><button class="btn">Read More</button></a>
-        </div>
+    <div class="content">
+      <h3 data-i18n="about-heading">We make technology work for you!</h3>
+      <p data-i18n="about-desc">
+        Our team of tech experts is constantly innovating, <b>all. the. time.</b><br>
+        By combining our skills in AI, web development, and mobile apps, we deliver powerful solutions that solve complex problems and elevate your business.
+      </p>
+      <a href="#"><button class="btn" data-i18n="read-more">Read More</button></a>
     </div>
+  </div>
   </section>
 
 <div class="pt-5 pb-5" style="background-color: #f2f2f2;">
   <div class="container">
     <div class="row">
       <div class="section-head col-sm-12" id="service">
-        <h1>Our Services</h1>
-        <p>We deliver top-tier AI solutions, websites, and mobile apps, along with professional services that help our clients tackle challenges and innovate.</p>
+        <h1 data-i18n="service-title">Our Services</h1>
+        <p data-i18n="service-desc">We deliver top-tier AI solutions, websites, and mobile apps, along with professional services that help our clients tackle challenges and innovate.</p>
       </div>
     </div>
 
     <div class="row d-flex align-items-stretch">
-      <!-- Web App -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <div class="item h-100">
           <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
-          <h6>Web App Development</h6>
-          <p>Our custom web development services include both front-end and back-end development. Whether it's enhancing an existing app or building a new one, our developers are up for the challenge.</p>
+          <h6 data-i18n="service-web-title">Web App Development</h6>
+          <p data-i18n="service-web-desc">Our custom web development services include both front-end and back-end development...</p>
         </div>
       </div>
 
-      <!-- Mobile App -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <div class="item h-100">
           <span class="icon feature_box_col_two"><i class="fa fa-mobile"></i></span>
-          <h6>Mobile App Development</h6>
-          <p>We create multi-platform mobile app solutions for both Android and iOS using React Native and other frameworks. Our apps are optimized for performance and user experience across all devices.</p>
+          <h6 data-i18n="service-mobile-title">Mobile App Development</h6>
+          <p data-i18n="service-mobile-desc">We create multi-platform mobile app solutions for both Android and iOS...</p>
         </div>
       </div>
 
-      <!-- AI App -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <div class="item h-100">
           <span class="icon feature_box_col_three"><i class="fa fa-magic"></i></span>
-          <h6>AI-Powered Applications</h6>
-          <p>Our AI-powered solutions bring unique advantages to smart homes, smart cities, and enterprise systems. They help optimize operations, automate decision-making, and deliver seamless user experiences.</p>
+          <h6 data-i18n="service-ai-title">AI-Powered Applications</h6>
+          <p data-i18n="service-ai-desc">Our AI-powered solutions bring unique advantages to smart homes, smart cities...</p>
         </div>
       </div>
 
-      <!-- SEO & Marketing -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <div class="item h-100">
           <span class="icon feature_box_col_one"><i class="fa fa-line-chart"></i></span>
-          <h6>SEO & Marketing</h6>
-          <p>We offer comprehensive SEO and digital marketing services to help businesses boost visibility, increase traffic, and generate leads. Services include on-page SEO, content marketing, backlinks, and Google/social ads.</p>
+          <h6 data-i18n="service-seo-title">SEO & Marketing</h6>
+          <p data-i18n="service-seo-desc">We offer comprehensive SEO and digital marketing services to help businesses...</p>
         </div>
       </div>
     </div>
@@ -178,46 +156,42 @@
   <div class="container">
     <div class="row">
       <div class="section-head col-sm-12" id="project">
-        <h1>Our Projects</h1>
-        <p>We build AI-powered systems, web platforms, and mobile applications that enhance efficiency, solve real-world problems, and deliver smart user experiences.</p>
+        <h1 data-i18n="project-title">Our Projects</h1>
+        <p data-i18n="project-desc">We build AI-powered systems, web platforms, and mobile applications...</p>
       </div>
     </div>
 
     <div class="row d-flex align-items-stretch">
-      <!-- Smart Camera -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <div class="item h-100">
           <span class="icon feature_box_col_one"><i class="fa fa-database"></i></span>
-          <h6>SmartVision Camera System</h6>
-          <p>Development of a smart camera system that uses AI to monitor and analyze real-time video feeds, providing enhanced security and insightful analytics for residential and commercial environments.</p>
+          <h6 data-i18n="project-smartcam-title">SmartVision Camera System</h6>
+          <p data-i18n="project-smartcam-desc">Development of a smart camera system that uses AI to monitor and analyze...</p>
         </div>
       </div>
 
-      <!-- Image Enhancer -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <div class="item h-100">
           <span class="icon feature_box_col_two"><i class="fa fa-camera"></i></span>
-          <h6>AI Image Enhancer App</h6>
-          <p>Development of a mobile app that leverages AI-powered servers to enhance image quality. Enables users to restore, sharpen, and upscale images seamlessly.</p>
+          <h6 data-i18n="project-image-title">AI Image Enhancer App</h6>
+          <p data-i18n="project-image-desc">Development of a mobile app that leverages AI-powered servers to enhance image quality...</p>
         </div>
       </div>
 
-      <!-- Learning Platform -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <div class="item h-100">
           <span class="icon feature_box_col_three"><i class="fa fa-graduation-cap"></i></span>
-          <h6>AI-Powered Online Learning Platform</h6>
-          <p>A system that supports learners through AI technology, enabling personalized education, improved engagement, and higher learning effectiveness in online environments.</p>
+          <h6 data-i18n="project-elearning-title">AI-Powered Online Learning Platform</h6>
+          <p data-i18n="project-elearning-desc">A system that supports learners through AI technology, enabling personalized education...</p>
         </div>
       </div>
 
-      <!-- Website Optimization -->
       <div class="col-lg-6 col-sm-12 mb-4">
         <a href="https://ladontranslation.com/" target="_blank" style="text-decoration: none; color: inherit;">
           <div class="item h-100">
             <span class="icon feature_box_col_one"><i class="fa fa-rocket"></i></span>
-            <h6>Website Optimization – LadonTranslation.com</h6>
-            <p>Supported the client in adding service and landing pages, enhancing page structure, improving SEO performance, and ensuring faster loading and better Google ranking.</p>
+            <h6 data-i18n="project-ladon-title">Website Optimization – LadonTranslation.com</h6>
+            <p data-i18n="project-ladon-desc">Supported the client in adding service and landing pages, enhancing page structure...</p>
           </div>
         </a>
       </div>
@@ -226,11 +200,10 @@
 </div>
 
 
-
 <div class="communicate">
-    <h3>Innovative Solutions for a Smarter Life</h3>
-    <p>We deliver cutting-edge technology to meet your needs.</p>
-    <a href="#contact"><button class="btn">Contact Now</button></a>
+  <h3 data-i18n="cta-title">Innovative Solutions for a Smarter Life</h3>
+  <p data-i18n="cta-sub">We deliver cutting-edge technology to meet your needs.</p>
+  <a href="#contact"><button class="btn" data-i18n="cta-btn">Contact Now</button></a>
 </div>
 
 <!-- <div class="testimonials mt-100">
@@ -440,10 +413,10 @@
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdetuyr9QdWQCLjydBPsUfA0xJjAWN4IuB_omAJzNJEW7ymIQ/formResponse"
                 method="POST">
             <input type="text" name="entry.1404268878" placeholder="Name" required class="form-control mb-3" />
-            <input type="tel" name="entry.1852800717" placeholder="Contact Number" required pattern="[0-9]{10}" maxlength="10" class="form-control mb-3" />
+            <input type="tel" name="entry.1852800717" placeholder="Contact Number"  class="form-control mb-3" />
             <input type="email" name="entry.1933898429" placeholder="Email" required class="form-control mb-3" />
             <textarea name="entry.325161144" placeholder="Your Message" required class="form-control mb-3" style="height: 150px;"></textarea>
-            <button type="submit" class="btn btn-dark px-4">Submit</button>
+            <button type="submit" class="btn btn-always-glow px-4">Submit</button>
           </form>
           <div id="form-success-message" style="display: none; text-align: center; font-size: 26px; font-weight: bold; color: #0d274d; padding: 60px 20px;">
             ✔ Cảm Ơn Bạn Đã Liên Hệ!
@@ -599,6 +572,116 @@
       </div>
   </div>
 <script>
+  const translations = {
+    en: {
+            
+            "home": "Home",
+            "about": "About Us",
+            "services": "Our Services",
+            "price": "Price",
+            "careers": "Careers",
+            "blog": "Technology Blog",
+            "contact": "Contact",
+            "home-title": "Enhance Your Life with AI-Powered Solutions",
+            "home-sub": "Brought to You by EyeCode Company Services",
+            "about-title": "about us",
+            "about-heading": "We make technology work for you!",
+            "about-desc": "Our team of tech experts is constantly innovating Our team of tech experts is constantly innovating, all. the. time By combining our skills in AI, web development, and mobile apps, we deliver powerful solutions that solve complex problems and elevate your business.",
+            "read-more": "Read More",
+            "service-title": "Our Services",
+            "service-desc": "We deliver top-tier AI solutions, websites, and mobile apps, along with professional services that help our clients tackle challenges and innovate.",
+            "service-web-title": "Web App Development",
+            "service-web-desc": "Our custom web development services include both front-end and back-end development. Whether it's enhancing an existing app or building a new one, our developers are up for the challenge.",
+            "service-mobile-title": "Mobile App Development",
+            "service-mobile-desc": "We create multi-platform mobile app solutions for both Android and iOS using React Native and other frameworks. Our apps are optimized for performance and user experience across all devices.",
+            "service-ai-title": "AI-Powered Applications",
+            "service-ai-desc": "Our AI-powered solutions bring unique advantages to smart homes, smart cities, and enterprise systems. They help optimize operations, automate decision-making, and deliver seamless user experiences.",
+            "service-seo-title": "SEO & Marketing",
+            "service-seo-desc": "We offer comprehensive SEO and digital marketing services to help businesses boost visibility, increase traffic, and generate leads. Services include on-page SEO, content marketing, backlinks, and Google/social ads.",
+            "project-title": "Our Projects",
+            "project-desc": "We build AI-powered systems, web platforms, and mobile applications that enhance efficiency, solve real-world problems, and deliver smart user experiences.",
+            "project-smartcam-title": "SmartVision Camera System",
+            "project-smartcam-desc": "Development of a smart camera system that uses AI to monitor and analyze real-time video feeds, providing enhanced security and insightful analytics for residential and commercial environments.",
+            "project-image-title": "AI Image Enhancer App",
+            "project-image-desc": "Development of a mobile app that leverages AI-powered servers to enhance image quality. Enables users to restore, sharpen, and upscale images seamlessly.",
+            "project-elearning-title": "AI-Powered Online Learning Platform",
+            "project-elearning-desc": "A system that supports learners through AI technology, enabling personalized education, improved engagement, and higher learning effectiveness in online environments.",
+            "project-ladon-title": "Website Optimization – LadonTranslation.com",
+            "project-ladon-desc": "Supported the client in adding service and landing pages, enhancing page structure, improving SEO performance, and ensuring faster loading and better Google ranking.",
+            "cta-title": "Innovative Solutions for a Smarter Life",
+            "cta-sub": "We deliver cutting-edge technology to meet your needs.",
+            "cta-btn": "Contact Now"
+    },
+    vi: {
+        "home": "Trang chủ",
+        "about": "Về chúng tôi",
+        "services": "Dịch vụ",
+        "price": "Bảng giá",
+        "careers": "Cơ hội nghề nghiệp",
+        "blog": "Blog Công Nghệ",
+        "contact": "Liên hệ",
+        "home-title": "Nâng Tầm Cuộc Sống Với Giải Pháp AI",
+        "home-sub": "Được phát triển bởi dịch vụ EyeCode",
+        "about-title": "về chúng tôi",
+        "about-heading": "Chúng tôi biến công nghệ thành sức mạnh cho bạn!",
+        "about-desc": "Đội ngũ kỹ thuật của chúng tôi liên tục đổi mới, mọi lúc. Bằng cách kết hợp các kỹ năng về AI, phát triển web và ứng dụng di động, chúng tôi cung cấp giải pháp mạnh mẽ để giải quyết các vấn đề phức tạp và nâng cao doanh nghiệp của bạn.",
+        "read-more": "Xem thêm",
+        "service-title": "Dịch vụ của chúng tôi",
+        "service-desc": "Chúng tôi cung cấp giải pháp AI chất lượng cao, phát triển website và ứng dụng di động, cùng các dịch vụ chuyên nghiệp giúp khách hàng vượt qua thách thức và đổi mới.",
+        "service-web-title": "Phát triển ứng dụng web",
+        "service-web-desc": "Dịch vụ phát triển web của chúng tôi bao gồm cả giao diện người dùng và hệ thống phía sau. Dù là nâng cấp ứng dụng hiện có hay xây dựng mới, đội ngũ kỹ sư của chúng tôi luôn sẵn sàng.",
+        "service-mobile-title": "Phát triển ứng dụng di động",
+        "service-mobile-desc": "Chúng tôi phát triển ứng dụng di động đa nền tảng cho Android và iOS bằng React Native và các công nghệ hiện đại. Ứng dụng được tối ưu để mang lại hiệu suất cao và trải nghiệm người dùng tuyệt vời.",
+        "service-ai-title": "Ứng dụng tích hợp AI",
+        "service-ai-desc": "Các giải pháp AI của chúng tôi mang lại lợi ích nổi bật cho nhà thông minh, đô thị thông minh và hệ thống doanh nghiệp. Chúng hỗ trợ tối ưu hóa vận hành, ra quyết định tự động và cải thiện trải nghiệm người dùng.",       
+        "service-seo-title": "SEO & Marketing",
+        "service-seo-desc": "Chúng tôi cung cấp dịch vụ SEO và marketing số toàn diện để giúp doanh nghiệp nâng cao hiển thị, tăng lượt truy cập và tạo ra khách hàng tiềm năng. Bao gồm SEO on-page, marketing nội dung, backlinks và quảng cáo trên Google, mạng xã hội.",
+        "project-title": "Dự án của chúng tôi",
+        "project-desc": "Chúng tôi xây dựng hệ thống tích hợp AI, nền tảng web và ứng dụng di động giúp tăng hiệu quả, giải quyết các vấn đề thực tiễn và mang lại trải nghiệm thông minh cho người dùng.",
+        "project-smartcam-title": "Hệ thống camera thông minh SmartVision",
+        "project-smartcam-desc": "Phát triển hệ thống camera sử dụng AI để giám sát và phân tích video theo thời gian thực, nâng cao bảo mật và cung cấp dữ liệu phân tích giá trị cho các không gian dân cư và thương mại.",
+        "project-image-title": "Ứng dụng cải thiện ảnh bằng AI",
+        "project-image-desc": "Phát triển ứng dụng di động kết nối máy chủ AI để nâng cấp chất lượng ảnh. Cho phép người dùng phục hồi, làm sắc nét và tăng độ phân giải ảnh dễ dàng.",
+        "project-elearning-title": "Nền tảng học trực tuyến tích hợp AI",
+        "project-elearning-desc": "Hệ thống hỗ trợ người học thông qua công nghệ AI, giúp cá nhân hóa lộ trình học tập, tăng mức độ tương tác và hiệu quả học tập trong môi trường trực tuyến.",
+        "project-ladon-title": "Tối ưu hóa website – LadonTranslation.com",
+        "project-ladon-desc": "Hỗ trợ khách hàng xây dựng trang dịch vụ và landing page, cải tiến cấu trúc trang, nâng cao hiệu suất SEO và đảm bảo tốc độ tải nhanh cũng như thứ hạng cao trên Google.",
+        "cta-title": "Giải pháp sáng tạo cho cuộc sống thông minh",
+        "cta-sub": "Chúng tôi mang đến công nghệ tiên tiến để đáp ứng nhu cầu của bạn.",
+        "cta-btn": "Liên hệ ngay"
+    }};
+  function setLanguage(lang) {
+      localStorage.setItem('language', lang); 
+      changeLanguage(lang);
+  }
+
+  function changeLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+              el.innerText = translations[lang][key];
+          }
+      });
+      const langDisplay = document.getElementById('lang-current');
+      if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = localStorage.getItem('language') || 'vi'; 
+    changeLanguage(savedLang);
+    
+    const langDisplay = document.getElementById('lang-current');
+    if (langDisplay) langDisplay.innerText = savedLang.toUpperCase();
+
+    // Optional: Đảm bảo giữ lại trạng thái active cho dropdown
+    const langOptions = document.querySelectorAll('.dropdown-item');
+    langOptions.forEach(option => {
+        if (option.textContent.trim().toLowerCase() === savedLang.toLowerCase()) {
+            option.classList.add('active');
+        }
+    });
+});
   document.getElementById("google-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -622,5 +705,10 @@
   });
 </script>
   <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+    <div class="floating-contact">
+        <a href="https://wa.me/6598975989" class="fc-icon whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://m.me/61565185437108" class="fc-icon messenger" target="_blank" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="http://zaloapp.com/qr/p/9by4ludjkof2" class="fc-icon zalo" target="_blank" title="Zalo"><img src="https://chat.zalo.me/favicon.ico" alt="Zalo" /></a>
+    </div>
 </body>
 </html>
