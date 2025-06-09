@@ -717,6 +717,13 @@ body{
     margin-bottom: 5rem;
 }
 
+.navbar .dropdown {
+    display: flex;
+    align-items: center;
+    margin-left: 16px; 
+    margin-top: -15px;
+    }
+
 .contact-in
 		{
 			width: 80%;

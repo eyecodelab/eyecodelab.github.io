@@ -25,236 +25,249 @@
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="./js/main.js"></script>
+    <!-- <script src="https://unpkg.com/i18next@22.4.11/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.1.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/jquery-i18next@1.2.1/dist/umd/jquery-i18next.min.js"></script> -->
+
+    
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"><img src="./images/logo-eyecode.jpg" alt=""></a>
+        <a href="#" class="logo"><img src="./images/logo-eyecode.jpg" alt="Logo" class="logo-img"></a>
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html#home">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <li><a href="price.html">Price</a></li>
-
-                <li><a href="careers.html">career</a></li>
-                <li><a href="blog.html">Blog Công Nghệ</a></li>
-
-                <li><a href="index.html#contact">contact</a></li>
+                <li><a href="index.html#home" data-i18n="home">home</a></li>
+                <li><a href="index.html#about" data-i18n="about">about</a></li>
+                <li><a href="index.html#service" data-i18n="services">services</a></li>
+                <li><a href="price.html" data-i18n="price">Price</a></li>
+                <li><a href="careers.html" data-i18n="careers">career</a></li>
+                <li><a href="blog.html" data-i18n="blog">Blog Công Nghệ</a></li>
+                <li><a href="index.html#contact" data-i18n="contact">contact</a></li>
                 <!-- <li><a href="index.html#faq">FAQ</a></li> -->
             </ul>
-
+            <div class="dropdown ml-3">
+              <button class="btn btn-outline-primary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-globe"></i> <span id="lang-current">VI</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                <a class="dropdown-item" href="#" onclick="setLanguage('vi')">VI</a>
+                <a class="dropdown-item" href="#" onclick="setLanguage('en')">EN</a>
+              </div>
+            </div>
 
 
         </nav>
     </header>
 
-<section id="home" class="home">
-    <h2>Home / Careers</h2>
-</section>
+    <section id="home" class="home">
+        <h2>Home / Careers</h2>
+    </section>
 
-<div class="career-container">
+    <!--<section id="career-heading" class="career-heading">
+       <h1 class="heading">Career</h1>
+        <p>Remote Intern Positions Available at EyeCode Company. Apply Now!</p>
+    </section>
+    <div class="container my-5">
+        <div class="form-container">
+            <div class="w-100 bg-white p-4 rounded shadow" style="font-size: 1.6rem; line-height: 1.7;">
+                <p><strong>EyeCode</strong> xây dựng cộng đồng <strong>“Thực Tập IT & AI Việt Nam”</strong>, nơi kết nối và chia sẻ kinh nghiệm, cơ hội thực tập, việc làm mới nhất trong lĩnh vực IT & AI ở Việt Nam và quốc tế.</p>
+                <p>✨ <strong>Gia nhập ngay</strong> để cập nhật thông tin nhanh nhất và không bỏ lỡ những cơ hội giá trị dành riêng cho bạn!</p>
+                <p>📌 Tham gia tại đây: <a href="https://www.facebook.com/groups/thuctapitai/" target="_blank" class="text-primary">https://www.facebook.com/groups/thuctapitai/</a></p>
 
-<section id="career-heading" class="career-heading" style="text-align: center; margin-bottom: 2rem;">
-    <h1 class="heading">Career</h1>
-    <p style="max-width: 600px; margin: auto;">
-        We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.
-    </p>
-</section>
+                <p><strong>EyeCode</strong> is currently looking for <strong>Remote Interns</strong> to participate in projects across a variety of fields, including smart homes, healthcare, agriculture, arts, human AI, and more. Our projects utilize the latest technologies in Machine Learning, Deep Learning, NLP, Computer Vision, IoT, Mobile App Development, Web Development, and more in our lab.</p>
 
-<!-- Tabs -->
-<div class="career-tabs" style="text-align: center; margin-bottom: 2rem;">
-    <button onclick="showSection('intern')" style="padding: 10px 20px;" id="tab-intern" class="active-tab">Internship</button>
-    <button onclick="showSection('fulltime')" style="padding: 10px 20px;" id="tab-fulltime">Full-time</button>
-</div>
+                <p>We are also seeking individuals with the ability to write articles, manage our Facebook Fanpage, and contribute to marketing efforts in general. We warmly welcome you to join us!</p>
 
-<!-- Internship Section -->
-<div id="intern" class="job-section">
-    <h2>Internship Positions</h2>
+                <p><strong>The specialized positions we are recruiting for include:</strong></p>
+                <ul style="list-style-position: inside;">
+                <li>Computer Vision, Deep Learning, and Embedded Systems</li>
+                <li>NLP & Multimodal AI (Text, V ision, Audio)</li>
+                <li>Generative AI (Text to Image, Image to Text, Text to Audio, Video to Text)</li>
+                <li>Internet of Things (IoT)</li>
+                <li>Mobile App Development</li>
+                <li>Web Development (Front-End, Back-End, Full-Stack) <strong>(Prioritize React, Django, Mongo DB)</strong></li>
+                <li>Web Tester</li>
+                <li>UI/UX Design</li>
+                <li>Marketing/Content Creation</li>
+                <li>Talent acquisition/HR Operation</li>
+                <li>Business Analyst</li>
+                </ul>
 
-        <div class="job-card" id="marketing-intern">
-        <h3>Marketing / Content Creation</h3>
-        <p>Create marketing strategies, content plans, and analyze engagement data.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqKU2H4GZ5Z_NwOuikqYajQFmxOa8BO5WcvheUSnWx0TMPug/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-        <div class="job-card" id="uiux-designer">
-        <h3>UI/UX Design</h3>
-        <p>Design user interfaces and improve user experience for our digital products.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-
-        <div class="job-card" id="ai-research-intern">
-        <h3>AI Research Intern</h3>
-        <p>Join our AI team working on Computer Vision, NLP, GenAI, and robotics projects.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-    <div class="job-card" id="web-dev-stack">
-        <h3>Web Development (Front-End / Back-End / Full-Stack)</h3>
-        <p>Build scalable web systems using React, Node.js, Django, MongoDB.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-
-
-        <div class="job-card" id="mobile-app-intern">
-        <h3>Mobile App Development</h3>
-        <p>Build and improve mobile apps using modern frameworks.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-
-    <div class="job-card" id="web-tester">
-        <h3>Web Tester</h3>
-        <p>Test and ensure the reliability and performance of our websites and platforms.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-    <div class="job-card" id="iot-intern">
-        <h3>Internet of Things (IoT)</h3>
-        <p>Develop smart devices and IoT systems integrated with AI and cloud platforms.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-
-        <div class="job-card" id="business-analyst-intern">
-        <h3>Business Analyst</h3>
-        <p>Gather business insights, analyze data, and support decision-making processes.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-
-    <div class="job-card" id="hr-operations-intern">
-        <h3>Talent Acquisition / HR Operations</h3>
-        <p>Assist in hiring, onboarding, and HR process improvement for a growing tech team.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-    </div>
-
-
-
-</div>
-
-
-<!-- Full-time Section (optional placeholder) -->
-<div id="fulltime" class="job-section" style="display: none;">
-    <h2>Full-time Positions</h2>
-
-        <p style="font-size: 1.7rem; color: #555; padding: 20px 0;">
-        Currently, there are no full-time openings. Positions will be published when available.
-    </p>
-
-    <!-- <div class="job-card" id="web-developer-fulltime">
-
-        <h3>Web Developer (Full-time)</h3>
-        <p>Build, maintain, and scale production-grade systems using React/Django.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+    <p class="fw-bold text-danger">We are sorry that only shortlisted candidates will be contacted.</p>
+    <p>If you have any questions, please contact us at: <a href="mailto:eyecodelab@gmail.com" class="text-primary">eyecodelab@gmail.com</a></p>
+  </div>
+            <div style="margin-top: 10px;"></div>
+            <form id="google-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/formResponse" method="POST">
+                <div class="form-group">
+                <input type="text" name="entry.1759990269" class="form-control" placeholder="Full Name *" required>
+                </div>
+                <div class="form-group">
+                <input type="email" name="entry.1599282358" class="form-control" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                <input type="text" name="entry.1389132666" class="form-control" placeholder="What field of study or career do you want to pursue? *" required>
+                </div>
+                <div class="form-group">
+                <label class="section-label">Which area(s) are you interested in? <span class="text-muted" style="font-weight: 400;">(Choose more than one)</span></label>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Robotics"> Robotics</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Computer Vision, Deep Learning and Embedded System"> Computer Vision, Deep Learning and Embedded System</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Gen AI, NLP & Multimodal AI (text, vision, audio)"> Gen AI, NLP & Multimodal AI (text, vision, audio)</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Mobile App Development"> Mobile App Development</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="UI/UX Design"> UI/UX Design</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Web Development (Front-End, Back-End, Full-Stack)"> Web Development</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Web Tester"> Web Tester</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Marketing /Branding/Content Creation"> Marketing /Branding/Content Creation</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Talent acquisition/HR Operation"> Talent acquisition/HR Operation</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Business Analyst"> Business Analyst</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="entry.793000115" value="Other"> Other</div>
+                </div>
+                <div class="form-group">
+                <input type="text" name="entry.1932333179" class="form-control" placeholder="Your Facebook link *" required>
+                </div>
+                <div class="form-group">
+                <input type="text" name="entry.437696294" class="form-control" placeholder="Which school are you attending? *" required>
+                </div>
+                <div class="form-group">
+                <input type="text" name="entry.1040589223" class="form-control" placeholder="What is your major? *" required>
+                </div>
+                <div class="form-group">
+                <label class="section-label">What Year Are You Currently Studying In? <span class="text-danger">*</span></label>
+                <select name="entry.1842009284" class="form-control" required>
+                    <option value="First year">First year</option>
+                    <option value="Second year">Second year</option>
+                    <option value="Third year">Third year</option>
+                    <option value="Fourth year">Fourth year</option>
+                    <option value="Fifth year">Fifth year</option>
+                    <option value="Other">Other</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <label class="section-label">What Type Of Internship Are You Applying For? <span class="text-danger">*</span></label>
+                <select name="entry.1763620949" class="form-control" required>
+                    <option value="Graduation internship and writing report">Graduation internship and writing report</option>
+                    <option value="Other">Other</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <input type="text" name="entry.2107068836" class="form-control" placeholder="Estimated report duration (DD/MM/YYYY to DD/MM/YYYY)">
+                </div>
+                <div class="form-group">
+                <input type="url" name="entry.882467309" class="form-control" placeholder="Link to your CV (PDF format) *" required>
+                </div>
+                <button type="submit" class="btn btn-success px-4">Submit</button>
+            </form>
+            <div id="form-success-message" style="display: none; text-align: center; font-size: 22px; font-weight: bold; color: #2e7d32; padding: 40px 20px;">
+                ✔ Thank you for applying!
+            </div>
+            </div>
+        </div>
     </div> -->
+    <section class="career-tab-section my-5">
+    <div class="text-center mb-4">
+        <h1 class="heading" data-i18n="career-title">Career</h1>
+        <p data-i18n="career-sub">We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.</p>
+        <div class="btn-group mt-3">
+        <button class="btn btn-outline-primary tab-btn active" onclick="showTab('internship')" data-i18n="internship">Internship</button>
+        <button class="btn btn-outline-primary tab-btn" onclick="showTab('fulltime')" data-i18n="fulltime">Full-time</button>
+        </div>
+    </div>
 
+    <!-- Internship -->
+    <div id="internship-tab" class="career-tab-content container">
+        <h4 class="mb-4 font-weight-bold" data-i18n="intern-title">Internship Positions </h4>
 
-</div>
-</div>
+        <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="marketing" >
+        <div>
+            <h5 class="font-weight-bold mb-1"  data-i18n="intern-ai-title">Marketing / Content Creation </h5>
+            <p class="mb-0" data-i18n="intern-ai-desc">Join our AI team working on NLP, GenAI, and robotics projects.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7NhSF85--gtMX3rb0xXNF3_ajXc89wJWy5JF1hPbd3dG0Rg/viewform?usp=header" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
 
+        <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="UI/UXDesign" >
+        <div>
+            <h5 class="font-weight-bold mb-1"  >UI/UX Design</h5>
+            <p class="mb-0" data-i18n="intern-web-uxui-desc">Design user interfaces and improve user experience for our digital products.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
 
-<style>
-.job-card {
-    border: 1px solid #ddd;
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    scroll-margin-top: 100px; /* ✅ thêm dòng này */
-}
+        <div class="career-item d-flex justify-content-between align-items-center flex-wrap"  data-id="AIResearchIntern">
+        <div>
+            <h5 class="font-weight-bold mb-1" >AI Research Intern</h5>
+            <p class="mb-0" data-i18n="intern-AI-Research">Join our AI team working on Computer Vision, NLP, GenAI, and robotics projects.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+         <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="WebDevelopment" >
+        <div>
+            <h5 class="font-weight-bold mb-1"  >Web Development (Front-End / Back-End / Full-Stack)</h5>
+            <p class="mb-0" data-i18n="intern-web-desc">Build scalable web systems using React, Node.js, Django, MongoDB.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+         <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="MobileAppDevelopment" >
+        <div>
+            <h5 class="font-weight-bold mb-1"  >Mobile App Development</h5>
+            <p class="mb-0" data-i18n="intern-mobile-desc">Build and improve mobile apps using modern frameworks.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+         <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="WebTester">
+        <div>
+            <h5 class="font-weight-bold mb-1"  >Web Tester</h5>
+            <p class="mb-0" data-i18n="intern-web-tester-desc">Develop and maintain web applications and sites.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+         <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="IoT"  >
+        <div>
+            <h5 class="font-weight-bold mb-1"  >Internet of Things (IoT)</h5>
+            <p class="mb-0" data-i18n="intern-IoT-desc">Develop and maintain web applications and sites.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+         <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="BusinessAnalyst" >
+        <div>
+            <h5 class="font-weight-bold mb-1"  >Business Analyst</h5>
+            <p class="mb-0" data-i18n="intern-BA-desc">Develop and maintain web applications and sites.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+        <div class="career-item d-flex justify-content-between align-items-center flex-wrap" data-id="HR" >
+        <div>
+            <h5 class="font-weight-bold mb-1"  >Talent Acquisition / HR Operations</h5>
+            <p class="mb-0" data-i18n="intern-HR-desc">Develop and maintain web applications and sites.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7WXXUQl_vkYKt4G80fDhrfvwPcQE_xff19D9YqarZqeL5Tw/viewform?usp=sharing&ouid=112316369219380192753" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+    </div>
 
+    <!-- Full-time -->
+    <div id="fulltime-tab" class="career-tab-content container" style="display: none;">
+        <h4 class="mb-4 font-weight-bold" data-i18n="fulltime-title">Full-Time Positions</h4>
+        <h4 class="mb-4 font-weight-bold">Currently, there are no full-time openings. Positions will be published when available.</h4>
+        <!-- <div class="career-item d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+            <h5 class="font-weight-bold mb-1" data-i18n="fulltime-ai-title">Senior AI Engineer</h5>
+            <p class="mb-0" data-i18n="fulltime-ai-desc">Lead AI initiatives, mentor interns, and drive GenAI research projects.</p>
+        </div>
+        <a href="https://forms.gle/your_google_form_link" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
 
-    .job-card h3 {
-        font-size: 2rem;
-        margin-bottom: 6px;
-    }
-
-    .job-card p {
-        font-size: 1.5rem;
-        color: #444;
-    }
-
-    .apply-btn {
-        display: inline-block;
-        margin-top: 8px;
-        padding: 8px 18px;
-        font-size: 1.5rem;
-        border: 1px solid #000;
-        border-radius: 4px;
-        text-decoration: none;
-    }
-
-    .career-tabs .active-tab {
-        background-color: #002a5c;
-        color: white;
-    }
-
-    .career-tabs button {
-        margin: 0 8px;
-        border: 1px solid #ccc;
-        background: #f8f8f8;
-        cursor: pointer;
-        font-size: 1.5rem;        /* tăng từ 1rem lên ~20px */
-        padding: 12px 32px;
-        border-radius: 6px;
-    }
-
-    .career-container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0 16px;
-        font-size: 1.05rem; /* tăng chung toàn bộ */
-    }
-
-    .career-heading h1 {
-        font-size: 3rem;           /* tăng từ 2.5rem lên ~48px */
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-
-    .career-heading p {
-    font-size: 2rem;         /* tăng từ 1.125rem lên ~24px */
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
-    color: #333;
-    }
-
-    .job-section h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    
-</style>
-
-
-<!-- JS logic for tab switching -->
-<script>
-    function showSection(section) {
-        document.getElementById('intern').style.display = section === 'intern' ? 'block' : 'none';
-        document.getElementById('fulltime').style.display = section === 'fulltime' ? 'block' : 'none';
-        document.getElementById('tab-intern').classList.toggle('active-tab', section === 'intern');
-        document.getElementById('tab-fulltime').classList.toggle('active-tab', section === 'fulltime');
-    }
-
-    // ✅ Cập nhật URL khi click vào mỗi job-card
-    document.querySelectorAll('.job-card').forEach(card => {
-        card.addEventListener('click', function () {
-            const id = this.id;
-            if (history.pushState) {
-                history.pushState(null, null, '#' + id);
-            } else {
-                location.hash = '#' + id;
-            }
-        });
-    });
-</script>
-
+        <div class="career-item d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+            <h5 class="font-weight-bold mb-1" data-i18n="fulltime-frontend-title">Frontend Developer</h5>
+            <p class="mb-0" data-i18n="fulltime-frontend-desc">Build intuitive user interfaces using modern JS frameworks.</p>
+        </div>
+        <a href="https://forms.gle/your_google_form_link" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
+        </div>
+    </div> -->
+    </section>
 
 
     <div class="footer">
@@ -340,6 +353,158 @@
         </div>
     </div>
 
+<script>
+//   document.getElementById("google-form").addEventListener("submit", function (e) {
+//     e.preventDefault();
+
+//     const form = e.target;
+//     const formData = new FormData(form);
+//     const messageDiv = document.getElementById("form-success-message");
+
+//     fetch(form.action, {
+//       method: "POST",
+//       mode: "no-cors",
+//       body: formData,
+//     }).then(() => {
+//       form.style.display = "none"; 
+//       messageDiv.style.display = "block"; 
+//     }).catch(() => {
+//       form.style.display = "none";
+//       messageDiv.style.display = "block";
+//       messageDiv.style.color = "red";
+//       messageDiv.textContent = "Đã xảy lỗi. Vui lòng thử lại sau.";
+//     });
+//   });
+    const translations = {
+        en: {
+            "career-title": "Career",
+            "career-sub": "We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.",
+            "internship": "Internship",
+            "fulltime": "Full-time",
+            "apply": "Apply",
+            "home": "Home",
+            "about": "About Us",
+            "services": "Our Services",
+            "price": "Price",
+            "careers": "Careers",
+            "blog": "Technology Blog",
+            "contact": "Contact",
+            "intern-title": "Internship Positions",
+            "intern-ai-title": "Marketing / Content Creation",
+            "intern-ai-desc": "Create marketing strategies, content plans, and analyze engagement data.",
+            "intern-web-title": "Web Developer",
+            "intern-web-uxui-desc": "Design user interfaces and improve user experience for our digital products.",
+            "intern-marketing-title": "Marketing Intern",
+            "intern-AI-Research": "Join our AI team working on Computer Vision, NLP, GenAI, and robotics projects.",
+            "fulltime-title": "Full-Time Positions",
+            "intern-web-tester-desc":"Test And Ensure The Reliability And Performance Of Our Websites And Platforms.",
+            "fulltime-ai-title": "Senior AI Engineer",
+            "intern-mobile-desc" : "Build and improve mobile apps using modern frameworks.",
+            "intern-web-desc":"Build scalable web systems using React, Node.js, Django, MongoDB.",
+            "fulltime-ai-desc": "Lead AI initiatives, mentor interns, and drive GenAI research projects.",
+            "fulltime-frontend-title": "Frontend Developer",
+            "intern-BA-desc":"Gather business insights, analyze data, and support decision-making processes.",
+            "intern-IoT-desc":"Develop smart devices and IoT systems integrated with AI and cloud platforms.",
+            "intern-HR-desc":"Assist in hiring, onboarding, and HR process improvement for a growing tech team.",
+            "fulltime-frontend-desc": "Build intuitive user interfaces using modern JS frameworks."
+        },
+        vi: {
+            "home": "Trang chủ",
+            "about": "Về chúng tôi",
+            "services": "Dịch vụ",
+            "price": "Bảng giá",
+            "careers": "Cơ hội nghề nghiệp",
+            "blog": "Blog Công Nghệ",
+            "contact": "Liên hệ",
+            "career-title": "Cơ hội nghề nghiệp",
+            "career-sub": "Chúng tôi đang xây dựng tương lai AI và tìm kiếm những cá nhân đam mê để cùng phát triển. Khám phá cơ hội tiếp theo của bạn dưới đây.",
+            "internship": "Thực tập",
+            "fulltime": "Toàn thời gian",
+            "apply": "Ứng tuyển",
+            "intern-title": "Vị trí Thực Tập",
+            "intern-ai-title": "Marketing / Content Creation",
+            "intern-ai-desc": "Tạo chiến lược tiếp thị, kế hoạch nội dung và phân tích dữ liệu tham gia.",
+            "intern-web-title": "Lập Trình Web",
+            "intern-web-uxui-desc": "Thiết kế giao diện người dùng và cải thiện trải nghiệm người dùng cho các sản phẩm kỹ thuật số của chúng tôi.",
+            "intern-marketing-title": "Thực Tập Sinh Marketing",
+            "intern-AI-Research": "Tham gia nhóm AI của chúng tôi làm việc trên các dự án máy tính, NLP, Genai và robot.",
+            "fulltime-title": "Vị trí Toàn Thời Gian",
+            "intern-web-tester-desc":"Kiểm tra và đảm bảo độ tin cậy và hiệu suất của các trang web.",
+            "intern-mobile-desc" : "Xây dựng và cải thiện các ứng dụng di động bằng cách sử dụng các frameworks.",
+            "intern-web-desc":"Xây dựng các hệ thống web có thể mở rộng bằng React, Node.js, Django, MongoDB.",
+            "fulltime-ai-title": "Kỹ Sư AI Cao Cấp",
+            "intern-IoT-desc":"Phát triển các thiết bị thông minh và hệ thống IoT được tích hợp với các nền tảng AI và Cloud Platforms.",
+            "intern-BA-desc":"Thu thập những hiểu biết kinh doanh, phân tích dữ liệu và hỗ trợ các quy trình ra quyết định",
+            "fulltime-ai-desc": "Dẫn dắt các sáng kiến AI, hướng dẫn thực tập sinh và phát triển GenAI.",
+            "fulltime-frontend-title": "Lập Trình Viên Frontend",
+            "intern-HR-desc":"Hỗ trợ tuyển dụng, Onboarding và cải tiến quy trình nhân sự cho một nhóm công nghệ đang phát triển.",
+            "fulltime-frontend-desc": "Xây dựng giao diện người dùng hiện đại bằng JavaScript."
+        }
+        };
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang); 
+        changeLanguage(lang);
+    }
+
+    function changeLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                el.innerText = translations[lang][key];
+            }
+        });
+        const langDisplay = document.getElementById('lang-current');
+        if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = localStorage.getItem('language') || 'vi'; 
+    changeLanguage(savedLang);
+    
+    const langDisplay = document.getElementById('lang-current');
+    if (langDisplay) langDisplay.innerText = savedLang.toUpperCase();
+
+    // Optional: Đảm bảo giữ lại trạng thái active cho dropdown
+    const langOptions = document.querySelectorAll('.dropdown-item');
+    langOptions.forEach(option => {
+        if (option.textContent.trim().toLowerCase() === savedLang.toLowerCase()) {
+            option.classList.add('active');
+        }
+    });
+});
+    document.querySelectorAll('.career-item').forEach(item => {
+        item.addEventListener('click', function () {
+        const id = this.getAttribute('data-id');
+        if (id) {
+            history.pushState(null, '', `#${id}`);
+        }
+        });
+    });
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const hash = location.hash.substring(1);
+        const target = document.querySelector(`[data-id="${hash}"]`);
+        if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+    function showTab(tab) {
+    const internshipTab = document.getElementById('internship-tab');
+    const fulltimeTab = document.getElementById('fulltime-tab');
+    const buttons = document.querySelectorAll('.tab-btn');
+    internshipTab.style.display = (tab === 'internship') ? 'block' : 'none';
+    fulltimeTab.style.display = (tab === 'fulltime') ? 'block' : 'none';
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    if (tab === 'internship') {
+      buttons[0].classList.add('active');
+    } else {
+      buttons[1].classList.add('active');
+    }
+  }
+</script>
+
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
 
     <script src="lib/jquery/jquery.min.js"></script>
@@ -350,6 +515,13 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+     <div class="floating-contact">
+        <a href="https://wa.me/6598975989" class="fc-icon whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://m.me/61565185437108" class="fc-icon messenger" target="_blank" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="http://zaloapp.com/qr/p/9by4ludjkof2" class="fc-icon zalo" target="_blank" title="Zalo"><img src="https://chat.zalo.me/favicon.ico" alt="Zalo" /></a>
+    </div>
+
 
 </body>
 </html>
