@@ -1,18 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
-        body {
-            background-color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        .home {
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f8f8f8;
-            border-radius: 8px;
-        }
         .floating-contact {
             position: fixed;
             bottom: 100px;
@@ -34,14 +20,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
         }
-         .navbar .dropdown {
-            display: flex;
-            align-items: center;
-            margin-left: 16px; 
-            margin-top: -15px;
-        }
-
-
         .fc-icon img {
             width: 28px;
             height: 28px;
@@ -124,7 +102,26 @@
             color: white;
         }
 
-        .dropdown-menu {
-            border-radius: 10px;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        .dropdown .dropdown-menu {
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+        }
+        .dropdown .btn-outline-primary {
+            border-radius: 999px; 
+            padding: 6px 16px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: white;
+            color: #007bff;
+            border: 2px solid #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: white;
         }

@@ -7,12 +7,7 @@
     $message = $_POST["message"];
 
     $body = "<ul><li>Name: ".$name."</li><li>Phone: ".$phone."</li><li>Email: ".$email."</li><li>Message: ".$message."</li></ul>";
-
-<<<<<<< HEAD
-    $status = mailfunction("eyecode@eyecodetech.com", "Company", $body); //reciever
-=======
     $status = mailfunction("eyecodelab@gmail.com", "Company", $body); //reciever
->>>>>>> hao-dev
     if($status)
         echo '<center><h1>Thanks! We will contact you soon.</h1></center>';
     else

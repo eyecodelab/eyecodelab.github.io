@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EyeCode Company Website</title>
-    <link rel="stylesheet" href="./css/careers.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/price.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="./images/logo-eyecode.jpg">
@@ -37,7 +38,7 @@
             </ul>
             <div class="dropdown ml-3">
               <button class="btn btn-outline-primary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-globe"></i> <span id="lang-current">VI</span>
+                <i class="fas fa-globe"></i> <span id="lang-current"></span>
               </button>
               <div class="dropdown-menu" aria-labelledby="languageDropdown">
                 <a class="dropdown-item" href="#" onclick="setLanguage('vi')">VI</a>
@@ -977,36 +978,66 @@
         "fanpage-exclusive-support": "Có kênh hỗ trợ riêng"
     }
 };
-    function setLanguage(lang) {
-        localStorage.setItem('language', lang); 
-        changeLanguage(lang);
+function setLanguage(lang) {
+
+    localStorage.setItem('language', lang);
+
+
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('lang', lang);
+    window.location.href = currentUrl.href;
+}
+
+function changeLanguage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.innerText = translations[lang][key];
+        }
+    });
+    const langDisplay = document.getElementById('lang-current');
+    if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+    
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+
+
+    if (urlLang) {
+        localStorage.setItem('language', urlLang);
     }
 
-    function changeLanguage(lang) {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) {
-                el.innerText = translations[lang][key];
-            }
-        });
-        const langDisplay = document.getElementById('lang-current');
-        if (langDisplay) langDisplay.innerText = lang.toUpperCase();
-    }
-      document.addEventListener("DOMContentLoaded", function () {
-      const savedLang = localStorage.getItem('language') || 'vi'; 
-      changeLanguage(savedLang);
-      
-      const langDisplay = document.getElementById('lang-current');
-      if (langDisplay) langDisplay.innerText = savedLang.toUpperCase();
+    const lang = localStorage.getItem('language') || 'vi';
+    changeLanguage(lang);
 
-      // Optional: Đảm bảo giữ lại trạng thái active cho dropdown
-      const langOptions = document.querySelectorAll('.dropdown-item');
-      langOptions.forEach(option => {
-          if (option.textContent.trim().toLowerCase() === savedLang.toLowerCase()) {
-              option.classList.add('active');
-          }
-      });
-  });
+    const langDisplay = document.getElementById('lang-current');
+    if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+
+
+    document.querySelectorAll('.dropdown-item').forEach(option => {
+        option.classList.remove('active');
+        if (option.textContent.trim().toLowerCase() === lang.toLowerCase()) {
+            option.classList.add('active');
+        }
+    });
+
+    document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+
+        if (
+            href.startsWith('#') ||
+            href.startsWith('http') ||
+            href.startsWith('mailto') ||
+            href.includes('lang=')
+        ) return;
+
+        const url = new URL(href, window.location.origin);
+        url.searchParams.set('lang', lang);
+        link.setAttribute('href', url.toString());
+    });
+});
   </script>
     <div class="floating-contact">
         <a href="https://wa.me/6598975989" class="fc-icon whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>

@@ -94,32 +94,6 @@
     .tab-content.active {
       display: block;
     }
-    .logo img {
-      height: 48px;         
-      width: auto;          
-      object-fit: contain;   
-      display: block;
-    }
-    .card {
-      border-radius: 12px;
-      border: 1px solid #eee;
-    }
-    .card-header {
-      font-weight: bold;
-      font-size: 1.2rem;
-      font-size: 1.7rem;
-      padding: 1.25rem ;
-    }
-    .card-body ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .card-body ul li::before {
-      content: '\2714';
-      color: green;
-      margin-right: 6px;
-      padding: 0.3rem 0;
-    }
     .table td,
     .table th {
       vertical-align: middle;
