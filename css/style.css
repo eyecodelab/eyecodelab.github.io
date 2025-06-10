@@ -864,6 +864,11 @@ body{
         .footer .footer-top .footer-newsletter {
             margin-bottom: 30px;
         }
+        .footer .footer-top .footer-newsletter form {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
         
         .footer .footer-top .social-links a {
             font-size: 18px;

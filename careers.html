@@ -54,8 +54,8 @@
                 <i class="fas fa-globe"></i> <span id="lang-current"></span>
               </button>
               <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                <a class="dropdown-item" href="#" onclick="setLanguage('vi')">VI</a>
                 <a class="dropdown-item" href="#" onclick="setLanguage('en')">EN</a>
+                <a class="dropdown-item" href="#" onclick="setLanguage('vi')">VI</a>
               </div>
             </div>
 
@@ -166,7 +166,7 @@
             </div>
         </div>
     </div> -->
-    <section class="career-tab-section my-5">
+    <!-- <section class="career-tab-section my-5">
     <div class="text-center mb-4">
         <h1 class="heading" data-i18n="career-title">Career</h1>
         <p data-i18n="career-sub">We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.</p>
@@ -176,7 +176,7 @@
         </div>
     </div>
 
-    <!-- Internship -->
+ 
     <div id="internship-tab" class="career-tab-content container">
         <h4 class="mb-4 font-weight-bold" data-i18n="intern-title">Internship Positions </h4>
 
@@ -255,12 +255,11 @@
         </div>
     </div>
 
-    <!-- Full-time -->
     <div id="fulltime-tab" class="career-tab-content container" style="display: none;">
         <h4 class="mb-4 font-weight-bold" data-i18n="fulltime-title">Full-Time Positions</h4>
         <h2 class="mb-4 font-weight-bold" style="font-size: 1.7rem; color: #555; padding: 20px 0;" data-i18n="fulltime-desc">
             Currently, there are no full-time openings. Positions will be published when available.
-        </h2>
+        </h2> -->
         <!-- <div class="career-item d-flex justify-content-between align-items-center flex-wrap">
         <div>
             <h5 class="font-weight-bold mb-1" data-i18n="fulltime-ai-title">Senior AI Engineer</h5>
@@ -277,9 +276,109 @@
         <a href="https://forms.gle/your_google_form_link" target="_blank" class="apply-btn" data-i18n="apply">Apply</a>
         </div>
     </div> -->
-    </div>
+    <!-- </div>
+    </section> -->
+    <div class="career-container">
+
+    <section id="career-heading" class="career-heading" style="text-align: center; margin-bottom: 2rem;">
+        <h1 class="heading">Career</h1>
+        <p style="max-width: 600px; margin: auto;">
+            We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.
+        </p>
     </section>
 
+    <!-- Tabs -->
+    <div class="career-tabs" style="text-align: center; margin-bottom: 2rem;">
+        <button onclick="showSection('intern')" style="padding: 10px 20px;" id="tab-intern" class="active-tab">Internship</button>
+        <button onclick="showSection('fulltime')" style="padding: 10px 20px;" id="tab-fulltime">Full-time</button>
+    </div>
+
+    <!-- Internship Section -->
+    <div id="intern" class="job-section">
+        <h2>Internship Positions</h2>
+
+            <div class="job-card" id="marketing-intern">
+            <h3>Marketing / Content Creation</h3>
+            <p>Create marketing strategies, content plans, and analyze engagement data.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqKU2H4GZ5Z_NwOuikqYajQFmxOa8BO5WcvheUSnWx0TMPug/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+            <div class="job-card" id="uiux-designer">
+            <h3>UI/UX Design</h3>
+            <p>Design user interfaces and improve user experience for our digital products.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+
+            <div class="job-card" id="ai-research-intern">
+            <h3>AI Research Intern</h3>
+            <p>Join our AI team working on Computer Vision, NLP, GenAI, and robotics projects.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+        <div class="job-card" id="web-dev-stack">
+            <h3>Web Development (Front-End / Back-End / Full-Stack)</h3>
+            <p>Build scalable web systems using React, Node.js, Django, MongoDB.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+
+
+            <div class="job-card" id="mobile-app-intern">
+            <h3>Mobile App Development</h3>
+            <p>Build and improve mobile apps using modern frameworks.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+
+        <div class="job-card" id="web-tester">
+            <h3>Web Tester</h3>
+            <p>Test and ensure the reliability and performance of our websites and platforms.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+        <div class="job-card" id="iot-intern">
+            <h3>Internet of Things (IoT)</h3>
+            <p>Develop smart devices and IoT systems integrated with AI and cloud platforms.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+
+            <div class="job-card" id="business-analyst-intern">
+            <h3>Business Analyst</h3>
+            <p>Gather business insights, analyze data, and support decision-making processes.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+
+        <div class="job-card" id="hr-operations-intern">
+            <h3>Talent Acquisition / HR Operations</h3>
+            <p>Assist in hiring, onboarding, and HR process improvement for a growing tech team.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Full-time Section (optional placeholder) -->
+    <div id="fulltime" class="job-section" style="display: none;">
+        <h2>Full-time Positions</h2>
+
+            <p style="font-size: 1.7rem; color: #555; padding: 20px 0;">
+            Currently, there are no full-time openings. Positions will be published when available.
+        </p>
+
+        <!-- <div class="job-card" id="web-developer-fulltime">
+
+            <h3>Web Developer (Full-time)</h3>
+            <p>Build, maintain, and scale production-grade systems using React/Django.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
+        </div> -->
+
+
+    </div>
+    </div>
 
     <div class="footer">
         <div class="footer-top">
@@ -346,14 +445,23 @@
                     <div class="col-lg-3 col-md-6 footer-newsletter">
                         <h4>Subscription</h4>
                         <p>We make technology work for you!</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit"  value="Subscribe">
+                        <form
+                        id="subscribe-form"
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdetuyr9QdWQCLjydBPsUfA0xJjAWN4IuB_omAJzNJEW7ymIQ/formResponse"
+                        method="POST"
+                        >
+                        <input type="hidden" name="entry.1404268878" value="subscribe" />
+                        <input type="hidden" name="entry.1852800717" value="123123123121" />
+                        <input type="hidden" name="entry.325161144" value="subscribe" />
+                        <input type="email" name="entry.1933898429" placeholder="Enter your email"required/>
+                        <input type="submit" value="Subscribe" />
                         </form>
-                    </div>
-  
-                </div>
-            </div>
-        </div>
+                        <div id="form-success-message1" style="display: none; text-align: center; font-size: 14px; font-weight: bold; color: #e3e8f0; ">
+                            Thanks you for Subscribe
+                      </div>
+              </div>
+          </div>
+      </div>
   
         <div class="container">
             <div class="row align-items-center">
@@ -474,8 +582,24 @@ function changeLanguage(lang) {
     const langDisplay = document.getElementById('lang-current');
     if (langDisplay) langDisplay.innerText = lang.toUpperCase();
     
-}
+}   
+        function showSection(section) {
+            document.getElementById('intern').style.display = section === 'intern' ? 'block' : 'none';
+            document.getElementById('fulltime').style.display = section === 'fulltime' ? 'block' : 'none';
+            document.getElementById('tab-intern').classList.toggle('active-tab', section === 'intern');
+            document.getElementById('tab-fulltime').classList.toggle('active-tab', section === 'fulltime');
+        }
 
+        document.querySelectorAll('.job-card').forEach(card => {
+            card.addEventListener('click', function () {
+                const id = this.id;
+                if (history.pushState) {
+                    history.pushState(null, null, '#' + id);
+                } else {
+                    location.hash = '#' + id;
+                }
+            });
+        });
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
@@ -485,7 +609,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('language', urlLang);
     }
 
-    const lang = localStorage.getItem('language') || 'vi';
+    const lang = localStorage.getItem('language') || 'en';
     changeLanguage(lang);
 
     const langDisplay = document.getElementById('lang-current');
@@ -531,20 +655,41 @@ document.addEventListener("DOMContentLoaded", function () {
         target.scrollIntoView({ behavior: 'smooth' });
         }
     });
-    function showTab(tab) {
-    const internshipTab = document.getElementById('internship-tab');
-    const fulltimeTab = document.getElementById('fulltime-tab');
-    const buttons = document.querySelectorAll('.tab-btn');
-    internshipTab.style.display = (tab === 'internship') ? 'block' : 'none';
-    fulltimeTab.style.display = (tab === 'fulltime') ? 'block' : 'none';
+//     function showTab(tab) {
+//     const internshipTab = document.getElementById('internship-tab');
+//     const fulltimeTab = document.getElementById('fulltime-tab');
+//     const buttons = document.querySelectorAll('.tab-btn');
+//     internshipTab.style.display = (tab === 'internship') ? 'block' : 'none';
+//     fulltimeTab.style.display = (tab === 'fulltime') ? 'block' : 'none';
 
-    buttons.forEach(btn => btn.classList.remove('active'));
-    if (tab === 'internship') {
-      buttons[0].classList.add('active');
-    } else {
-      buttons[1].classList.add('active');
-    }
-  }
+//     buttons.forEach(btn => btn.classList.remove('active'));
+//     if (tab === 'internship') {
+//       buttons[0].classList.add('active');
+//     } else {
+//       buttons[1].classList.add('active');
+//     }
+//   }
+    document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const messageDiv = document.getElementById("form-success-message1");
+
+    fetch(form.action, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    }).then(() => {
+      form.style.display = "none"; 
+      messageDiv.style.display = "block"; 
+    }).catch(() => {
+      form.style.display = "none";
+      messageDiv.style.display = "block";
+      messageDiv.style.color = "red";
+      messageDiv.textContent = "Đã xảy lỗi. Vui lòng thử lại sau.";
+    });
+  });
 </script>
 
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>

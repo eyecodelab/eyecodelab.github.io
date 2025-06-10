@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,8 +48,8 @@
                 <i class="fas fa-globe"></i> <span id="lang-current"></span>
               </button>
               <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                <a class="dropdown-item" href="#" onclick="setLanguage('vi')">VI</a>
                 <a class="dropdown-item" href="#" onclick="setLanguage('en')">EN</a>
+                <a class="dropdown-item" href="#" onclick="setLanguage('vi')">VI</a>
               </div>
             </div>
         </nav>
@@ -426,7 +426,7 @@
             <input type="tel" name="entry.1852800717" placeholder="Contact Number"  class="form-control mb-3" />
             <input type="email" name="entry.1933898429" placeholder="Email" required class="form-control mb-3" />
             <textarea name="entry.325161144" placeholder="Your Message" required class="form-control mb-3" style="height: 150px;"></textarea>
-            <button type="submit" class="btn btn-always-glow px-4">Submit</button>
+            <button type="submit1 " class="btn btn-always-glow px-4">Submit</button>
           </form>
           <div id="form-success-message" style="display: none; text-align: center; font-size: 26px; font-weight: bold; color: #0d274d; padding: 60px 20px;">
             ✔ Cảm Ơn Bạn Đã Liên Hệ!
@@ -560,44 +560,32 @@
                
                       </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 footer-newsletter">
+                  <!-- <div class="col-lg-3 col-md-6 footer-newsletter">
                         <h4>Subscription</h4>
                         <p>We make technology work for you!</p>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit"  value="Subscribe">
                         </form>
-                    </div>
-                  <!-- <div class="col-lg-3 col-md-6 footer-newsletter" id="footer-newsletter">
+                    </div> -->
+                  <div class="col-lg-3 col-md-6 footer-newsletter" id="footer-newsletter">
                     <h4>Subscription</h4>
                     <p>We make technology work for you!</p>
-
                     <form
                       id="subscribe-form"
                       action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdetuyr9QdWQCLjydBPsUfA0xJjAWN4IuB_omAJzNJEW7ymIQ/formResponse"
                       method="POST"
-                      target="hidden_iframe_footer"
-                      onsubmit="window.submitted = true;"
                     >
-    
                       <input type="hidden" name="entry.1404268878" value="subscribe" />
                       <input type="hidden" name="entry.1852800717" value="123123123121" />
                       <input type="hidden" name="entry.325161144" value="subscribe" />
-
-                      <input
-                        type="email"
-                        name="entry.1933898429"
-                        placeholder="Enter your email"
-                        required
-                      />
+                      <input type="email" name="entry.1933898429" placeholder="Enter your email"required/>
                       <input type="submit" value="Subscribe" />
                     </form>
-
-                    <iframe
-                      name="hidden_iframe_footer"
-                      id="hidden_iframe_footer"
-                      style="display:none;"
-                    ></iframe> -->
+                      <div id="form-success-message1" style="display: none; text-align: center; font-size: 14px; font-weight: bold; color: #e3e8f0; ">
+                        Thanks you for Subscribe
+                      </div>
                   </div>
+              </div>
           </div>
       </div>
 
@@ -719,7 +707,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('language', urlLang);
     }
 
-    const lang = localStorage.getItem('language') || 'vi';
+    const lang = localStorage.getItem('language') || 'en';
     changeLanguage(lang);
 
     const langDisplay = document.getElementById('lang-current');
@@ -747,7 +735,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.setAttribute('href', url.toString());
     });
 });
-  document.getElementById("google-form").addEventListener("submit", function (e) {
+  document.getElementById("google-form").addEventListener("submit1", function (e) {
     e.preventDefault();
 
     const form = e.target;
@@ -768,27 +756,29 @@ document.addEventListener("DOMContentLoaded", function () {
       messageDiv.textContent = "Đã xảy lỗi. Vui lòng thử lại sau.";
     });
   });
-  //  window.submitted = false;
+  document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  // document
-  //   .getElementById("subscribe-form")
-  //   .addEventListener("submit", function (e) {
- 
-  //     window.submitted = true;
-  //   });
+    const form = e.target;
+    const formData = new FormData(form);
+    const messageDiv = document.getElementById("form-success-message1");
 
-
-  // document
-  //   .getElementById("hidden_iframe_footer")
-  //   .addEventListener("load", function () {
-  //     if (!window.submitted) return;
-
-  //     document.getElementById("footer-newsletter").innerHTML = `
-  //       <h4>Subscription</h4>
-  //       <p>Thank you for subscribing!</p>
-  //     `;
-  //     window.submitted = false;
-  //   });
+    fetch(form.action, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    }).then(() => {
+      form.style.display = "none"; 
+      messageDiv.style.display = "block"; 
+    }).catch(() => {
+      form.style.display = "none";
+      messageDiv.style.display = "block";
+      messageDiv.style.color = "red";
+      messageDiv.textContent = "Đã xảy lỗi. Vui lòng thử lại sau.";
+    });
+  });
+   
+   
 </script>
   <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
     <div class="floating-contact">
