@@ -1,0 +1,871 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+ /* Banner */
+    .banner{
+        width: 100%;
+        max-width: 100%;
+        height: 492px;
+        position: relative;
+    }
+
+    .banner-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banner-content{
+        position: absolute;
+        top: 120px;
+        left: 75px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .banner-content .banner-text{
+        width: 544px;
+        display: inline-block;
+        color: white;;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 64px;
+        text-align:left;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .banner-content .banner-subtext{
+        width: 525px;
+        display: inline-block;
+        color: white;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 300;
+        text-align: left;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+
+    /* Course Details */
+    .course-details{
+        width: 100%;
+        max-width: 100%;
+        padding: 85px;
+        background: #f9f9f9;
+    }
+    .course-title{
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 500;
+        text-align: center;
+        color: #333;
+        margin-bottom: 38px;  
+    }
+    .course-subtitle{
+        font-size: 32px;
+        line-height: 44px;
+        font-weight: 700;
+        text-align: left;
+    }
+    .course-description{
+        width: 100%;
+        font-size: 20px;
+        line-height: 36px;
+        text-align: left;
+        color: black;
+        margin: 0 auto;
+        padding: 10px 22px 24px 29px;
+        border: 1px solid #6b7280;
+        margin-bottom: 38px;  
+    }
+    .course-description ul{
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+    .course-description i{
+        text-align: right;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+
+    /* Preview */
+    .preview-title{
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 600;
+        text-align: left;
+        margin-bottom: 20px;
+        color: #306bf2;
+    }
+    .preview-content{
+        padding: 20px;
+        font-size: 20px;
+        line-height: 36px;
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Curriculum */
+    .course-summary{
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center; 
+    }
+    .tb-title {
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 42px;
+        color: #333;
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+        border: 1px solid #E5E7EB;
+    }
+
+    /* Instructor  */
+    .instructor-content img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .instructor-title{
+        font-size: 40px; 
+        line-height: 56px;
+        margin-bottom: 20px;
+    }
+    .instructor-content .text-secondary{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .instructor-content .text-third{
+        font-size: 20px;
+        line-height: 36px ;
+        margin-bottom: 30px;
+    }
+    /* Table container for horizontal scroll on mobile */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    td, th{
+        border: 1px solid #E5E7EB;
+    }
+    thead th{
+        text-align: center;
+        padding: 12px 24px;
+        font-weight: 500;
+        color: #6B7280;
+    }
+    td:first-child{
+        text-align: center;
+        width: 5%;
+        font-weight: 600;
+    }
+    td{
+        padding: 12px 24px;
+    }
+    td>ul{
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+    /* Price Section */
+    #price .price-header{
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        color: #333;
+    }
+    #price .block-price{
+        width: 45%;
+        height: 500px;
+        border: 1px solid #D1D5DB;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 20px;
+    }
+    #price .title-price{
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    #price .content{
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 12px;
+        padding: 0 61px;
+    }
+    #price .price{
+        font-size: 48px;
+        line-height: 64px;
+        font-weight: 700;
+        text-align: center;
+        color: #306bf2;
+    }
+
+    /* Preview FAQ */
+    .preview-faq-title{
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 600;
+        text-align: left;
+        margin-bottom: 20px;
+        color: #306bf2;
+    }
+    .preview-faq-content{
+        padding: 0 20px;
+        font-size: 20px;
+        line-height: 36px;
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Time Open Course */
+    #course-launch{
+        width: 100%;
+        max-width: 100%;
+        padding: 85px;
+    }
+
+    #course-launch .launch-title{
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 28px;
+        color: #306bf2;
+    }
+    #course-launch .launch-content{
+        font-size: 20px;
+        line-height: 36px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 73px;
+    }
+    #course-launch .launch-content h1{
+        font-size: 64px;
+        line-height: 84px;
+        font-weight: 600;
+        color: #306bf2;
+    }
+    #course-launch .launch-button{
+        max-width: 100%;
+        display: flex ;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background: #306BF2;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+    }
+    #course-launch .launch-button:hover{
+        background: #1D4ED8;
+    }
+    .launch-button .label{
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    .launch-button i{
+        margin-left: 12px;
+        font-size: 24px;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+        padding: 20px;
+        border: 1px solid #D1D5DB;
+    }
+    .faq-container h1{
+        margin-right: 210px;
+        font-size: 40px;
+        line-height: 56px;
+    }
+    .content-faq{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .content-faq h2{
+        font-size: 24px;
+        line-height: 36px;
+        text-align: left;
+    }
+    .content-faq p{
+        font-size: 18px;
+        line-height: 32px;
+        text-align: left;
+        font-weight: 300;
+    }
+    /* Contact Section */
+    #contact{
+        padding-bottom: 170px !important;
+        background-color: #f9f9f9 ;
+    }
+    #contact .contact-title{
+        width: 600px;
+        margin-bottom: 40px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 500;
+    } 
+    #contact .label{
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    #contact .button-brand{
+        margin-left: 0;
+        width: 140px;
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background: #306BF2;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+    }
+    #contact i{
+        font-size: 16px;
+    }
+    #contact .button-brand:hover{
+        background: #1D4ED8;
+    }
+
+    /* Responsive Design */
+    
+    /* Tablet Styles */
+    @media screen and (max-width: 1024px) {
+        /* Banner responsive */
+        .banner {
+            height: 350px;
+        }
+        
+        .banner-content {
+            top: 80px;
+            left: 40px;
+        }
+        
+        .banner-content .banner-text {
+            width: 90%;
+            font-size: 36px;
+            line-height: 48px;
+        }
+        
+        .banner-content .banner-subtext {
+            width: 90%;
+            font-size: 28px;
+            line-height: 40px;
+        }
+        
+        /* Course details responsive */
+        .course-details {
+            padding: 50px 40px;
+        }
+        
+        .course-title {
+            font-size: 32px;
+            line-height: 44px;
+        }
+        
+        .course-subtitle {
+            font-size: 28px;
+            line-height: 38px;
+        }
+        
+        .course-description {
+            font-size: 18px;
+            padding: 15px 20px;
+        }
+        
+        /* Preview and FAQ titles */
+        .preview-title,
+        .preview-faq-title {
+            font-size: 32px;
+            line-height: 44px;
+        }
+        
+        .preview-content,
+        .preview-faq-content {
+            font-size: 18px;
+            padding: 15px;
+        }
+        
+        /* Table responsive */
+        .tb-title {
+            font-size: 32px;
+            line-height: 44px;
+        }
+        
+        table {
+            font-size: 12px;
+        }
+        
+        td, th {
+            padding: 8px 12px;
+        }
+        
+        /* Price section responsive */
+        #price .block-price {
+            width: 48%;
+            height: auto;
+            min-height: 400px;
+            padding: 15px;
+        }
+        
+        #price .title-price {
+            font-size: 32px;
+            line-height: 44px;
+        }
+        
+        #price .content {
+            font-size: 20px;
+            padding: 0 30px;
+        }
+        
+        #price .price {
+            font-size: 40px;
+            line-height: 52px;
+        }
+        
+        /* Course launch responsive */
+        #course-launch {
+            padding: 50px 40px;
+        }
+        
+        #course-launch .launch-title {
+            font-size: 32px;
+            line-height: 44px;
+        }
+        
+        #course-launch .launch-content {
+            font-size: 18px;
+        }
+        
+        #course-launch .launch-content h1 {
+            font-size: 48px;
+            line-height: 64px;
+        }
+        
+        .launch-button .label {
+            font-size: 24px;
+        }
+        
+        /* FAQ responsive */
+        .faq-container h1 {
+            font-size: 32px;
+            line-height: 44px;
+            margin-right: 50px;
+        }
+        
+        .content-faq h2 {
+            font-size: 20px;
+            line-height: 32px;
+        }
+        
+        .content-faq p {
+            font-size: 16px;
+            line-height: 28px;
+        }
+        
+        /* Contact responsive */
+        #contact .contact-title {
+            width: 100%;
+            font-size: 32px;
+            line-height: 44px;
+        }
+    }
+    
+    /* Mobile Styles */
+    @media screen and (max-width: 768px) {
+        /* Banner mobile */
+        .banner {
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .banner-content {
+            top: 100px;
+            left: 40px;
+            right: 15px;
+        }
+        
+        .banner-content .banner-text {
+            width: 100%;
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+        .banner-content .banner-subtext {
+            width: 100%;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        /* Course details mobile */
+        .course-details {
+            padding: 30px
+        }
+        
+        .course-title {
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+        }
+        
+        .course-subtitle {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        .course-description {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 15px;
+        }
+        
+        /* Preview and FAQ mobile */
+        .preview-title,
+        .preview-faq-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+        .preview-content,
+        .preview-faq-content {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 10px;
+        }
+        
+        /* Row adjustments for mobile */
+        .row.g-4.align-items-start,
+        .row.g-5.align-items-start {
+            flex-direction: column;
+        }
+        
+        /* Table mobile */
+        .tb-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+        table {
+            font-size: 10px;
+            line-height: 16px;
+        }
+        
+        td, th {
+            padding: 6px 8px;
+        }
+        
+        td:first-child {
+            width: 10%;
+        }
+        
+        /* Price section mobile */
+        #price .d-flex.flex-row {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        #price .block-price {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+        }
+        
+        #price .title-price {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+        #price .content {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 0 15px;
+        }
+        
+        #price .price {
+            font-size: 32px;
+            line-height: 42px;
+        }
+        
+        /* Course launch mobile */
+        #course-launch {
+            padding: 30px;
+        }
+        
+        #course-launch .launch-title {
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+        }
+        
+        #course-launch .launch-content {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        
+        #course-launch .launch-content h1 {
+            font-size: 32px;
+            line-height: 42px;
+        }
+        
+        .launch-button {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .launch-button .label {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        
+        /* FAQ mobile */
+        .faq-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .faq-container h1 {
+            font-size: 24px;
+            line-height: 32px;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        
+        .content-faq h2 {
+            font-size: 18px;
+            line-height: 26px;
+        }
+        
+        .content-faq p {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        
+        /* Contact mobile */
+        #contact {
+            padding-bottom: 100px !important;
+        }
+        
+        #contact .contact-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+        #contact .button-brand {
+            width: auto;
+            padding: 10px 20px;
+        }
+    }
+    
+    /* Small Mobile Styles */
+    @media screen and (max-width: 480px) {
+        .banner {
+            height: 240px;
+        }
+        
+        .banner-content {
+            top: 40px;
+            left: 15px;
+            right: 15px;
+        }
+        
+        .banner-content .banner-text {
+            font-size: 20px;
+            line-height: 26px;
+        }
+        
+        .banner-content .banner-subtext {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        
+        .course-details {
+            padding: 20px 15px;
+        }
+        
+        .course-title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        .preview-title,
+        .preview-faq-title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        .tb-title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        /* Instructor images responsive */
+        .rounded-circle {
+            width: 120px !important;
+            height: 120px !important;
+        }
+        
+        /* Launch button small screens */
+        .launch-button .label {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        
+        .launch-button i {
+            font-size: 16px;
+        }
+    }
+    
+    /* Additional responsive fixes */
+    @media screen and (max-width: 991px) {
+        /* Bootstrap column adjustments for medium screens */
+        /* .col-lg-3,
+        .col-lg-7 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .mr-5 {
+            margin-right: 0 !important;
+        } */
+        
+        /* Instructor section responsive */
+        .instructor-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .ml-5 {
+            margin-left: 0 !important;
+            margin-top: 15px;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        /* Override Bootstrap responsive behavior for mobile */
+        .d-flex.flex-row.justify-content-between {
+            flex-direction: column !important;
+        }
+        
+        .d-flex.justify-content-center.align-items-center {
+            flex-direction: column !important;
+        }
+        
+        /* Instructor images smaller on mobile */
+        .rounded-circle {
+            width: 100px !important;
+            height: 100px !important;
+        }
+        
+        /* Text adjustments for instructors */
+        .instructor-content .text-secondary {
+            font-size: 18px;
+            line-height: 26px;
+           
+        }
+        .instructor-content .text-third {
+            font-size: 16px;
+            line-height: 24px ;
+            margin-bottom: 30px;
+        }
+        
+        .h4.fw-semibold {
+            font-size: 22px !important;
+        }
+        
+        .text-muted {
+            font-size: 16px !important;
+            line-height: 24px !important;
+        }
+        
+        /* Instructor description text */
+        .instructor-title {
+            font-size: 24px ;
+            line-height: 35px ;
+            margin-bottom: 20px;
+        }
+        
+        /* Rectangle images in internship section responsive */
+        img[src*="Rectangle 301.png"],
+        img[src*="Rectangle 302.png"], 
+        img[src*="Rectangle 303.png"],
+        img[src*="Rectangle 304.png"] {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Banner container image responsive */
+        .banner-container {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    /* General image responsive rules */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Ensure container divs don't overflow */
+    .container-fluid,
+    .container {
+        overflow-x: hidden;
+    }
+    
+    /* Text wrapping and overflow handling */
+    p, div, span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Prevent horizontal scroll on body */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Fix for long words in table cells */
+    td {
+        word-break: break-word;
+        hyphens: auto;
+    }
