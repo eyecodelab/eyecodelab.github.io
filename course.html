@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeCode Company Website</title>
+    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/price.css">
+	<link rel="stylesheet" href="./css/course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="./images/logo-eyecode.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo"><img src="./images/logo-eyecode.jpg" alt="Logo" class="logo-img"></a>
+        <div class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html#home">Trang chủ</a></li>
+                <li><a href="index.html#about">Về chúng tôi</a></li>
+                <li><a href="index.html#service">Dịch vụ</a></li>
+                <li><a href="price.html">Bảng giá</a></li>
+                <li><a href="careers.html">Cơ hội nghề nghiệp</a></li>
+                <li><a href="course.html">Khóa Học</a></li>
+                <li><a href="blog.html">Blog Công Nghệ</a></li>
+                <li><a href="index.html#contact">Liên hệ</a></li>
+            </ul>
+            <div class="dropdown ml-3">
+                <button class="btn btn-outline-primary dropdown-toggle lang-switcher" type="button" id="langDropdown" data-toggle="dropdown">
+                    <i class="fas fa-globe"></i> <span id="lang-current">VI</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('vi')">VI</a>
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="./images/banner.png" class="banner-img" alt="Banner">
+        <div class="banner-content">
+            <h1 class="banner-text">KHÓA HỌC</h1>
+            <p class="banner-paragraph">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            </p>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+        <div id="course" class="course-details">
+            <h1 class="course-title">Các khóa học</h1>
+            <div class="course-list">
+                <div class="course-item">
+                    <img src="./images/course-1.png" alt="Course 1" class="course-image">
+                    <div class="course-info">
+                        <h2>Khóa học UI/UX</h2>
+                        <p class="course-">Khóa học UI/UX Designer Cơ Bản giúp bạn nắm vững các nguyên lý thiết kế giao diện người dùng và trải nghiệm người dùng. Bạn sẽ học cách tạo ra các giao diện đẹp mắt, dễ sử dụng thông qua việc áp dụng các công cụ thiết kế như Figma. Khóa học này cũng cung cấp kiến thức cơ bản về nghiên cứu người dùng và tạo wireframes, prototypes.</p>
+                        <a href="course-1.html" class="course-button">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<!-- Contact Section -->
+  	<div id="contact" class="course-details">
+    		<div class="contact-title">Cùng Eyecode, biến ý tưởng của bạn thành hiện thực.</div>
+    		<div class="button-brand d-flex row gap-1">
+      			<div class="label">Liên hệ</div>
+				<i class="fa fa-arrow-right" aria-hidden="true"></i>
+    		</div>
+  	</div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Home</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About us</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#service">Our services</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & condition</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#portfolio">Portfolio</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#team">Team</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
+                        <h4>Contact Us</h4>
+                        <h4>Đà Nẵng Office</h4>
+                        <p>
+                            85 Tran Phu st<br>
+                            Hai Chau district, Da Nang city<br>
+                            Viet Nam <br>
+                        </p>
+                        
+                        <h4>Hà Nội Office</h4>
+                        <p>
+                            239 Xuan Thuy st<br>
+                            Cau Giay district, Ha Noi city<br>
+                            Viet Nam <br>
+                        </p>
+                        
+                        <h4>TP.HCM Office</h4>
+                        <p>
+                            No. 95 Nguyen Cong Tru St<br>
+                            Sai Gon Ward, Ho Chi Minh City <br>
+                            Viet Nam <br>
+                        </p>
+                        <p>
+                            <strong>Email:</strong> eyecode@eyecodetech.com<br>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61565185437108"><i class="ion-logo-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/eyecode"><i class="ion-logo-linkedin"></i></a>
+                            <a href="https://www.youtube.com/@EyeCodeTech"><i class="ion-logo-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Subscription</h4>
+                        <p>We make technology work for you!</p>
+                        <form action="" method="post">
+                            <input type="email" name="email">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
+                    Copyright &copy; 2024 EyeCode Company Website. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+	  const translations = {
+    en: {
+            
+            "home": "Home",
+            "about": "About Us",
+            "services": "Our Services",
+            "price": "Price",
+            "careers": "Careers",
+            "blog": "Technology Blog",
+            "contact": "Contact",
+            "home-title": "Enhance Your Life with AI-Powered Solutions",
+            "home-sub": "Brought to You by EyeCode Company Services",
+            "about-title": "about us",
+            "about-heading": "We make technology work for you!",
+            "about-desc": "Our team of tech experts is constantly innovating Our team of tech experts is constantly innovating, all. the. time By combining our skills in AI, web development, and mobile apps, we deliver powerful solutions that solve complex problems and elevate your business.",
+            "read-more": "Read More",
+            "service-title": "Our Services",
+            "service-desc": "We deliver top-tier AI solutions, websites, and mobile apps, along with professional services that help our clients tackle challenges and innovate.",
+            "service-web-title": "Web App Development",
+            "service-web-desc": "Our custom web development services include both front-end and back-end development. Whether it's enhancing an existing app or building a new one, our developers are up for the challenge.",
+            "service-mobile-title": "Mobile App Development",
+            "service-mobile-desc": "We create multi-platform mobile app solutions for both Android and iOS using React Native and other frameworks. Our apps are optimized for performance and user experience across all devices.",
+            "service-ai-title": "AI-Powered Applications",
+            "service-ai-desc": "Our AI-powered solutions bring unique advantages to smart homes, smart cities, and enterprise systems. They help optimize operations, automate decision-making, and deliver seamless user experiences.",
+            "service-seo-title": "SEO & Marketing",
+            "service-seo-desc": "We offer comprehensive SEO and digital marketing services to help businesses boost visibility, increase traffic, and generate leads. Services include on-page SEO, content marketing, backlinks, and Google/social ads.",
+            "project-title": "Our Projects",
+            "project-desc": "We build AI-powered systems, web platforms, and mobile applications that enhance efficiency, solve real-world problems, and deliver smart user experiences.",
+            "project-smartcam-title": "SmartVision Camera System",
+            "project-smartcam-desc": "Development of a smart camera system that uses AI to monitor and analyze real-time video feeds, providing enhanced security and insightful analytics for residential and commercial environments.",
+            "project-image-title": "AI Image Enhancer App",
+            "project-image-desc": "Development of a mobile app that leverages AI-powered servers to enhance image quality. Enables users to restore, sharpen, and upscale images seamlessly.",
+            "project-elearning-title": "AI-Powered Online Learning Platform - YouReay.net",
+            "project-elearning-desc": "A system that supports learners through AI technology, enabling personalized education, improved engagement, and higher learning effectiveness in online environments.",
+            "project-ladon-title": "Website Optimization – LadonTranslation.com",
+            "project-ladon-desc": "Supported the client in adding service and landing pages, enhancing page structure, improving SEO performance, and ensuring faster loading and better Google ranking.",
+            "cta-title": "Innovative Solutions for a Smarter Life",
+            "cta-sub": "We deliver cutting-edge technology to meet your needs.",
+            "cta-btn": "Contact Now"
+    },
+    vi: {
+        "home": "Trang chủ",
+        "about": "Về chúng tôi",
+        "services": "Dịch vụ",
+        "price": "Bảng giá",
+        "careers": "Cơ hội nghề nghiệp",
+        "blog": "Blog Công Nghệ",
+        "contact": "Liên hệ",
+        "home-title": "Nâng Tầm Cuộc Sống Với Giải Pháp AI",
+        "home-sub": "Được phát triển bởi dịch vụ EyeCode",
+        "about-title": "về chúng tôi",
+        "about-heading": "Chúng tôi biến công nghệ thành sức mạnh cho bạn!",
+        "about-desc": "Đội ngũ kỹ thuật của chúng tôi liên tục đổi mới, mọi lúc. Bằng cách kết hợp các kỹ năng về AI, phát triển web và ứng dụng di động, chúng tôi cung cấp giải pháp mạnh mẽ để giải quyết các vấn đề phức tạp và nâng cao doanh nghiệp của bạn.",
+        "read-more": "Xem thêm",
+        "service-title": "Dịch vụ của chúng tôi",
+        "service-desc": "Chúng tôi cung cấp giải pháp AI chất lượng cao, phát triển website và ứng dụng di động, cùng các dịch vụ chuyên nghiệp giúp khách hàng vượt qua thách thức và đổi mới.",
+        "service-web-title": "Phát triển ứng dụng web",
+        "service-web-desc": "Dịch vụ phát triển web của chúng tôi bao gồm cả giao diện người dùng và hệ thống phía sau. Dù là nâng cấp ứng dụng hiện có hay xây dựng mới, đội ngũ kỹ sư của chúng tôi luôn sẵn sàng.",
+        "service-mobile-title": "Phát triển ứng dụng di động",
+        "service-mobile-desc": "Chúng tôi phát triển ứng dụng di động đa nền tảng cho Android và iOS bằng React Native và các công nghệ hiện đại. Ứng dụng được tối ưu để mang lại hiệu suất cao và trải nghiệm người dùng tuyệt vời.",
+        "service-ai-title": "Ứng dụng tích hợp AI",
+        "service-ai-desc": "Các giải pháp AI của chúng tôi mang lại lợi ích nổi bật cho nhà thông minh, đô thị thông minh và hệ thống doanh nghiệp. Chúng hỗ trợ tối ưu hóa vận hành, ra quyết định tự động và cải thiện trải nghiệm người dùng.",       
+        "service-seo-title": "SEO & Marketing",
+        "service-seo-desc": "Chúng tôi cung cấp dịch vụ SEO và marketing số toàn diện để giúp doanh nghiệp nâng cao hiển thị, tăng lượt truy cập và tạo ra khách hàng tiềm năng. Bao gồm SEO on-page, marketing nội dung, backlinks và quảng cáo trên Google, mạng xã hội.",
+        "project-title": "Dự án của chúng tôi",
+        "project-desc": "Chúng tôi xây dựng hệ thống tích hợp AI, nền tảng web và ứng dụng di động giúp tăng hiệu quả, giải quyết các vấn đề thực tiễn và mang lại trải nghiệm thông minh cho người dùng.",
+        "project-smartcam-title": "Hệ thống camera thông minh SmartVision",
+        "project-smartcam-desc": "Phát triển hệ thống camera sử dụng AI để giám sát và phân tích video theo thời gian thực, nâng cao bảo mật và cung cấp dữ liệu phân tích giá trị cho các không gian dân cư và thương mại.",
+        "project-image-title": "Ứng dụng cải thiện ảnh bằng AI",
+        "project-image-desc": "Phát triển ứng dụng di động kết nối máy chủ AI để nâng cấp chất lượng ảnh. Cho phép người dùng phục hồi, làm sắc nét và tăng độ phân giải ảnh dễ dàng.",
+        "project-elearning-title": "Nền tảng học trực tuyến tích hợp AI",
+        "project-elearning-desc": "Hệ thống hỗ trợ người học thông qua công nghệ AI, giúp cá nhân hóa lộ trình học tập, tăng mức độ tương tác và hiệu quả học tập trong môi trường trực tuyến.",
+        "project-ladon-title": "Tối ưu hóa website – LadonTranslation.com",
+        "project-ladon-desc": "Hỗ trợ khách hàng xây dựng trang dịch vụ và landing page, cải tiến cấu trúc trang, nâng cao hiệu suất SEO và đảm bảo tốc độ tải nhanh cũng như thứ hạng cao trên Google.",
+        "cta-title": "Giải pháp sáng tạo cho cuộc sống thông minh",
+        "cta-sub": "Chúng tôi mang đến công nghệ tiên tiến để đáp ứng nhu cầu của bạn.",
+        "cta-btn": "Liên hệ ngay"
+    }};
+  function setLanguage(lang) {
+      localStorage.setItem('language', lang); 
+      changeLanguage(lang);
+  }
+
+  function changeLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+              el.innerText = translations[lang][key];
+          }
+      });
+      const langDisplay = document.getElementById('lang-current');
+      if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = localStorage.getItem('language') || 'vi'; 
+    changeLanguage(savedLang);
+    
+    const langDisplay = document.getElementById('lang-current');
+    if (langDisplay) langDisplay.innerText = savedLang.toUpperCase();
+
+    // Optional: Đảm bảo giữ lại trạng thái active cho dropdown
+    const langOptions = document.querySelectorAll('.dropdown-item');
+    langOptions.forEach(option => {
+        if (option.textContent.trim().toLowerCase() === savedLang.toLowerCase()) {
+            option.classList.add('active');
+        }
+    });
+});
+</script> -->
+    <div class="floating-contact">
+        <a href="https://wa.me/6598975989" class="fc-icon whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://m.me/61565185437108" class="fc-icon messenger" target="_blank" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="http://zaloapp.com/qr/p/9by4ludjkof2" class="fc-icon zalo" target="_blank" title="Zalo"><img src="https://chat.zalo.me/favicon.ico" alt="Zalo" /></a>
+    </div>
+</body>
+</html>
