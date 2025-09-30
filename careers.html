@@ -45,7 +45,7 @@
                 <li><a href="index.html#service" data-i18n="services">services</a></li>
                 <!-- <li><a href="price.html" data-i18n="price">Price</a></li> -->
                 <li><a href="careers.html" data-i18n="careers">career</a></li>
-                <li><a href="course.html" data-i18n="course">course</a></li>
+                <li><a href="course.html" data-i18n="course">Khóa Học</a></li>
                 <li><a href="blog.html" data-i18n="blog">Blog Công Nghệ</a></li>
                 <li><a href="index.html#contact" data-i18n="contact">contact</a></li>
                 <!-- <li><a href="index.html#faq">FAQ</a></li> -->
@@ -504,150 +504,151 @@
 //       messageDiv.textContent = "Đã xảy lỗi. Vui lòng thử lại sau.";
 //     });
 //   });
-    const translations = {
-        en: {
-            "career-title": "Career",
-            "career-sub": "We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.",
-            "internship": "Internship",
-            "fulltime": "Full-time",
-            "apply": "Apply",
-            "home": "Home",
-            "about": "About Us",
-            "services": "Our Services",
-            "price": "Price",
-            "careers": "Careers",
-            "fulltime-desc" : "Currently, there are no full-time openings. Positions will be published when available.",
-            "blog": "Technology Blog",
-            "contact": "Contact",
-            "intern-title": "Internship Positions",
-            "intern-ai-title": "Marketing / Content Creation",
-            "intern-ai-desc": "Create marketing strategies, content plans, and analyze engagement data.",
-            "intern-web-title": "Web Developer",
-            "intern-web-uxui-desc": "Design user interfaces and improve user experience for our digital products.",
-            "intern-marketing-title": "Marketing Intern",
-            "intern-AI-Research": "Join our AI team working on Computer Vision, NLP, GenAI, and robotics projects.",
-            "fulltime-title": "Full-Time Positions",
-            "intern-web-tester-desc":"Test And Ensure The Reliability And Performance Of Our Websites And Platforms.",
-            "fulltime-ai-title": "Senior AI Engineer",
-            "intern-mobile-desc" : "Build and improve mobile apps using modern frameworks.",
-            "intern-web-desc":"Build scalable web systems using React, Node.js, Django, MongoDB.",
-            "fulltime-ai-desc": "Lead AI initiatives, mentor interns, and drive GenAI research projects.",
-            "fulltime-frontend-title": "Frontend Developer",
-            "intern-BA-desc":"Gather business insights, analyze data, and support decision-making processes.",
-            "intern-IoT-desc":"Develop smart devices and IoT systems integrated with AI and cloud platforms.",
-            "intern-HR-desc":"Assist in hiring, onboarding, and HR process improvement for a growing tech team.",
-            "fulltime-frontend-desc": "Build intuitive user interfaces using modern JS frameworks."
-        },
-        vi: {
-            "home": "Trang chủ",
-            "about": "Về chúng tôi",
-            "services": "Dịch vụ",
-            "price": "Bảng giá",
-            "careers": "Cơ hội nghề nghiệp",
-            "blog": "Blog Công Nghệ",
-            "contact": "Liên hệ",
-            "fulltime-desc" : "Hiện tại, Chúng tôi không có mở tuyển dụng vị trí toàn thời gian. Vị trí sẽ được công bố khi có sẵn.",
-            "career-title": "Cơ hội nghề nghiệp",
-            "career-sub": "Chúng tôi đang xây dựng tương lai AI và tìm kiếm những cá nhân đam mê để cùng phát triển. Khám phá cơ hội tiếp theo của bạn dưới đây.",
-            "internship": "Thực tập",
-            "fulltime": "Toàn thời gian",
-            "apply": "Ứng tuyển",
-            "intern-title": "Vị trí Thực Tập",
-            "intern-ai-title": "Marketing / Content Creation",
-            "intern-ai-desc": "Tạo chiến lược tiếp thị, kế hoạch nội dung và phân tích dữ liệu tham gia.",
-            "intern-web-title": "Lập Trình Web",
-            "intern-web-uxui-desc": "Thiết kế giao diện người dùng và cải thiện trải nghiệm người dùng cho các sản phẩm kỹ thuật số của chúng tôi.",
-            "intern-marketing-title": "Thực Tập Sinh Marketing",
-            "intern-AI-Research": "Tham gia nhóm AI của chúng tôi làm việc trên các dự án máy tính, NLP, Genai và robot.",
-            "fulltime-title": "Vị trí Toàn Thời Gian",
-            "intern-web-tester-desc":"Kiểm tra và đảm bảo độ tin cậy và hiệu suất của các trang web.",
-            "intern-mobile-desc" : "Xây dựng và cải thiện các ứng dụng di động bằng cách sử dụng các frameworks.",
-            "intern-web-desc":"Xây dựng các hệ thống web có thể mở rộng bằng React, Node.js, Django, MongoDB.",
-            "fulltime-ai-title": "Kỹ Sư AI Cao Cấp",
-            "intern-IoT-desc":"Phát triển các thiết bị thông minh và hệ thống IoT được tích hợp với các nền tảng AI và Cloud Platforms.",
-            "intern-BA-desc":"Thu thập những hiểu biết kinh doanh, phân tích dữ liệu và hỗ trợ các quy trình ra quyết định",
-            "fulltime-ai-desc": "Dẫn dắt các sáng kiến AI, hướng dẫn thực tập sinh và phát triển GenAI.",
-            "fulltime-frontend-title": "Lập Trình Viên Frontend",
-            "intern-HR-desc":"Hỗ trợ tuyển dụng, Onboarding và cải tiến quy trình nhân sự cho một nhóm công nghệ đang phát triển.",
-            "fulltime-frontend-desc": "Xây dựng giao diện người dùng hiện đại bằng JavaScript."
-        }
-        };
+const translations = {
+    en: {
+        "career-title": "Career",
+        "career-sub": "We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.",
+        "internship": "Internship",
+        "fulltime": "Full-time",
+        "apply": "Apply",
+        "home": "Home",
+        "about": "About Us",
+        "services": "Our Services",
+        "price": "Price",
+        "careers": "Careers",
+        "fulltime-desc" : "Currently, there are no full-time openings. Positions will be published when available.",
+        "blog": "Technology Blog",
+        "contact": "Contact",
+        "intern-title": "Internship Positions",
+        "intern-ai-title": "Marketing / Content Creation",
+        "intern-ai-desc": "Create marketing strategies, content plans, and analyze engagement data.",
+        "intern-web-title": "Web Developer",
+        "intern-web-uxui-desc": "Design user interfaces and improve user experience for our digital products.",
+        "intern-marketing-title": "Marketing Intern",
+        "intern-AI-Research": "Join our AI team working on Computer Vision, NLP, GenAI, and robotics projects.",
+        "fulltime-title": "Full-Time Positions",
+        "intern-web-tester-desc":"Test And Ensure The Reliability And Performance Of Our Websites And Platforms.",
+        "fulltime-ai-title": "Senior AI Engineer",
+        "intern-mobile-desc" : "Build and improve mobile apps using modern frameworks.",
+        "intern-web-desc":"Build scalable web systems using React, Node.js, Django, MongoDB.",
+        "fulltime-ai-desc": "Lead AI initiatives, mentor interns, and drive GenAI research projects.",
+        "fulltime-frontend-title": "Frontend Developer",
+        "intern-BA-desc":"Gather business insights, analyze data, and support decision-making processes.",
+        "intern-IoT-desc":"Develop smart devices and IoT systems integrated with AI and cloud platforms.",
+        "intern-HR-desc":"Assist in hiring, onboarding, and HR process improvement for a growing tech team.",
+        "fulltime-frontend-desc": "Build intuitive user interfaces using modern JS frameworks."
+    },
+    vi: {
+        "home": "Trang chủ",
+        "about": "Về chúng tôi",
+        "services": "Dịch vụ",
+        "price": "Bảng giá",
+        "careers": "Cơ hội nghề nghiệp",
+        "blog": "Blog Công Nghệ",
+        "contact": "Liên hệ",
+        "fulltime-desc" : "Hiện tại, Chúng tôi không có mở tuyển dụng vị trí toàn thời gian. Vị trí sẽ được công bố khi có sẵn.",
+        "career-title": "Cơ hội nghề nghiệp",
+        "career-sub": "Chúng tôi đang xây dựng tương lai AI và tìm kiếm những cá nhân đam mê để cùng phát triển. Khám phá cơ hội tiếp theo của bạn dưới đây.",
+        "internship": "Thực tập",
+        "fulltime": "Toàn thời gian",
+        "apply": "Ứng tuyển",
+        "intern-title": "Vị trí Thực Tập",
+        "intern-ai-title": "Marketing / Content Creation",
+        "intern-ai-desc": "Tạo chiến lược tiếp thị, kế hoạch nội dung và phân tích dữ liệu tham gia.",
+        "intern-web-title": "Lập Trình Web",
+        "intern-web-uxui-desc": "Thiết kế giao diện người dùng và cải thiện trải nghiệm người dùng cho các sản phẩm kỹ thuật số của chúng tôi.",
+        "intern-marketing-title": "Thực Tập Sinh Marketing",
+        "intern-AI-Research": "Tham gia nhóm AI của chúng tôi làm việc trên các dự án máy tính, NLP, Genai và robot.",
+        "fulltime-title": "Vị trí Toàn Thời Gian",
+        "intern-web-tester-desc":"Kiểm tra và đảm bảo độ tin cậy và hiệu suất của các trang web.",
+        "intern-mobile-desc" : "Xây dựng và cải thiện các ứng dụng di động bằng cách sử dụng các frameworks.",
+        "intern-web-desc":"Xây dựng các hệ thống web có thể mở rộng bằng React, Node.js, Django, MongoDB.",
+        "fulltime-ai-title": "Kỹ Sư AI Cao Cấp",
+        "intern-IoT-desc":"Phát triển các thiết bị thông minh và hệ thống IoT được tích hợp với các nền tảng AI và Cloud Platforms.",
+        "intern-BA-desc":"Thu thập những hiểu biết kinh doanh, phân tích dữ liệu và hỗ trợ các quy trình ra quyết định",
+        "fulltime-ai-desc": "Dẫn dắt các sáng kiến AI, hướng dẫn thực tập sinh và phát triển GenAI.",
+        "fulltime-frontend-title": "Lập Trình Viên Frontend",
+        "intern-HR-desc":"Hỗ trợ tuyển dụng, Onboarding và cải tiến quy trình nhân sự cho một nhóm công nghệ đang phát triển.",
+        "fulltime-frontend-desc": "Xây dựng giao diện người dùng hiện đại bằng JavaScript."
+    }
+    };
+
   function setLanguage(lang) {
-
     localStorage.setItem('language', lang);
-
 
     const currentUrl = new URL(window.location.href);
     currentUrl.searchParams.set('lang', lang);
     window.location.href = currentUrl.href;
-}
-
-function changeLanguage(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            el.innerText = translations[lang][key];
-        }
-    });
-    const langDisplay = document.getElementById('lang-current');
-    if (langDisplay) langDisplay.innerText = lang.toUpperCase();
-    
-}   
-        function showSection(section) {
-            document.getElementById('intern').style.display = section === 'intern' ? 'block' : 'none';
-            document.getElementById('fulltime').style.display = section === 'fulltime' ? 'block' : 'none';
-            document.getElementById('tab-intern').classList.toggle('active-tab', section === 'intern');
-            document.getElementById('tab-fulltime').classList.toggle('active-tab', section === 'fulltime');
-        }
-
-        document.querySelectorAll('.job-card').forEach(card => {
-            card.addEventListener('click', function () {
-                const id = this.id;
-                if (history.pushState) {
-                    history.pushState(null, null, '#' + id);
-                } else {
-                    location.hash = '#' + id;
-                }
-            });
-        });
-document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlLang = urlParams.get('lang');
-
-
-    if (urlLang) {
-        localStorage.setItem('language', urlLang);
     }
 
-    const lang = localStorage.getItem('language') || 'en';
-    changeLanguage(lang);
+    function changeLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerText = translations[lang][key];
+            }
+        });
+        const langDisplay = document.getElementById('lang-current');
+        if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+    }   
 
-    const langDisplay = document.getElementById('lang-current');
-    if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+    function showSection(section) {
+        document.getElementById('intern').style.display = section === 'intern' ? 'block' : 'none';
+        document.getElementById('fulltime').style.display = section === 'fulltime' ? 'block' : 'none';
+        document.getElementById('tab-intern').classList.toggle('active-tab', section === 'intern');
+        document.getElementById('tab-fulltime').classList.toggle('active-tab', section === 'fulltime');
+    }
+
+    document.querySelectorAll('.job-card').forEach(card => {
+        card.addEventListener('click', function () {
+            const id = this.id;
+            if (history.pushState) {
+                history.pushState(null, null, '#' + id);
+            } else {
+                location.hash = '#' + id;
+            }
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
 
 
-    document.querySelectorAll('.dropdown-item').forEach(option => {
-        option.classList.remove('active');
-        if (option.textContent.trim().toLowerCase() === lang.toLowerCase()) {
-            option.classList.add('active');
+        if (urlLang) {
+            localStorage.setItem('language', urlLang);
         }
+
+        const lang = localStorage.getItem('language') || 'en';
+        changeLanguage(lang);
+
+        const langDisplay = document.getElementById('lang-current');
+        if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+
+
+        document.querySelectorAll('.dropdown-item').forEach(option => {
+            option.classList.remove('active');
+            if (option.textContent.trim().toLowerCase() === lang.toLowerCase()) {
+                option.classList.add('active');
+            }
+        });
+
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+
+            if (
+                href.startsWith('#') ||
+                href.startsWith('http') ||
+                href.startsWith('mailto') ||
+                href.includes('lang=')
+            ) return;
+
+            const url = new URL(href, window.location.origin);
+            url.searchParams.set('lang', lang);
+            link.setAttribute('href', url.toString());
+        });
     });
 
-    document.querySelectorAll('a[href]').forEach(link => {
-        const href = link.getAttribute('href');
-
-        if (
-            href.startsWith('#') ||
-            href.startsWith('http') ||
-            href.startsWith('mailto') ||
-            href.includes('lang=')
-        ) return;
-
-        const url = new URL(href, window.location.origin);
-        url.searchParams.set('lang', lang);
-        link.setAttribute('href', url.toString());
-    });
-});
     document.querySelectorAll('.career-item').forEach(item => {
         item.addEventListener('click', function () {
         const id = this.getAttribute('data-id');
@@ -656,7 +657,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         });
     });
-
 
     window.addEventListener('DOMContentLoaded', () => {
         const hash = location.hash.substring(1);
@@ -701,7 +701,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 </script>
-
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
 
     <div class="floating-contact">
@@ -718,6 +717,5 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
 </body>
 </html>
