@@ -39,9 +39,9 @@ function mailfunction($mail_reciever_email, $mail_reciever_name, $mail_msg, $att
     if($attachment !== false){
         $mail->AddAttachment($attachment);
     }
-    
+
     $mail->AltBody = 'This is a plain-text message body';
- 
+
     if (!$mail->send()) {
         return false;
     } else {

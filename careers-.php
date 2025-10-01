@@ -1,4 +1,4 @@
-<?php   
+<?php
     require("./mailing/mailfunction.php");
 
     $name = $_POST["name"];
@@ -23,7 +23,7 @@
         else
             echo '<center><h1>Error sending message! Please try again.</h1></center>';
 	}
-	else 
+	else
 	{
 		echo "<center><h1>Error uploading file! Please try again.</h1></center>";
 	}

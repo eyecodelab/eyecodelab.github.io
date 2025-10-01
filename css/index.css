@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
         .logo img {
-        height: 48px;         
-        width: auto;          
-        object-fit: contain;   
+        height: 48px;
+        width: auto;
+        object-fit: contain;
         display: block;
         }
         .contact-form input,
@@ -26,7 +26,7 @@
             color: white;
         }
         .dropdown .btn-outline-primary {
-            border-radius: 999px; 
+            border-radius: 999px;
             padding: 6px 16px;
             font-weight: 600;
             font-size: 1rem;
@@ -95,5 +95,5 @@
         .btn-always-glow:hover {
             background-color: #093267;
         }
-        
+
      

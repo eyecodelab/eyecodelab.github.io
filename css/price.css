@@ -108,13 +108,13 @@
       background-clip: padding-box, border-box;
       background-origin: border-box;
       background-image:
-        linear-gradient(#fff, #fff), 
+        linear-gradient(#fff, #fff),
         linear-gradient(45deg, rgb(0,184,148),  rgb(0,184,148), rgb(0,184,148),  rgb(0,184,148));
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%, 100% 100%;
       border-radius: 12px;
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
       padding: 1.2rem;
     }
     .tab-style .card {
@@ -129,7 +129,7 @@
       background-position: center;
       background-size: 100% 100%, 100% 100%;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
       padding: 1.2rem;
     }
 
@@ -144,7 +144,7 @@
       background-position: center;
       background-size: 100% 100%, 100% 100%;
       border-radius: 12px;
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
       padding: 1.2rem;
     }
     td.check {
@@ -185,10 +185,10 @@
       border-radius: 8px;
       line-height: 1;
       z-index: 1;
-      font-size: 1.25rem; 
+      font-size: 1.25rem;
     }
     .dropdown .btn-outline-primary {
-      border-radius: 999px; 
+      border-radius: 999px;
       padding: 6px 16px;
       font-weight: 600;
       font-size: 1rem;
@@ -221,6 +221,6 @@
     .navbar .dropdown {
     display: flex;
     align-items: center;
-    margin-left: 16px; 
+    margin-left: 16px;
     margin-top: -15px;
     }
