@@ -34,7 +34,7 @@ function mailfunction($mail_reciever_email, $mail_reciever_name, $mail_msg, $att
             throw new Exception('Attachment file does not exist: ' . $attachment_path);
         }
     }
-    
+
     $mail->AltBody = 'This is a plain-text message body';
 
     try {

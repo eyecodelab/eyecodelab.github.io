@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,10 +22,10 @@
             background: #fff;
             padding: 40px 30px;
             border-radius: 18px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12); 
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
             max-width: 860px;
             margin: 60px auto;
-            border: 1px solid #eee; 
+            border: 1px solid #eee;
         }
 
         .form-group input,
@@ -51,7 +50,7 @@
             margin: 0;
             position: relative;
             top: 0;
-            transform: translateY(7px); 
+            transform: translateY(7px);
         }
 
         .form-group label {
@@ -75,7 +74,7 @@
         .navbar .dropdown {
         display: flex;
         align-items: center;
-        margin-left: 16px; 
+        margin-left: 16px;
         margin-top: -15px;
         }
 
@@ -83,10 +82,10 @@
             margin: 0 10px;
             min-width: 160px;
             font-weight: 600;
-            font-size: 15px; 
+            font-size: 15px;
             border-radius: 10px;
-            padding: 8px 12px; 
-            margin-bottom: 1rem 
+            padding: 8px 12px;
+            margin-bottom: 1rem
         }
         .floating-contact {
             position: fixed;
@@ -157,7 +156,7 @@
             display: block;
             color: #222;
         } */
-       
+
         .heading {
             font-size: 42px;
             font-weight: 800;
@@ -166,7 +165,7 @@
             margin-bottom: 10px;
         }
         body {
-            background: #f6f7fb; 
+            background: #f6f7fb;
         }
         /* #career-heading p {
             text-align: center;
@@ -175,7 +174,7 @@
             margin-bottom: 30px;
         } */
         .form-container {
-            max-width: 2000px;  
+            max-width: 2000px;
             margin: 0 auto;
         }
         .career-tab-section {
@@ -191,10 +190,10 @@
             font-size: 20px;
             padding: 10px 16px;
         }
-        
+
         .tab-btn.active {
             background-color: #1c64f2;
-            color: white;   
+            color: white;
             border-color: #1c64f2;
         }
         .apply-btn {
@@ -208,7 +207,7 @@
         }
         .career-item > div {
             text-align: left;
-            max-width: 80%; 
+            max-width: 80%;
         }
 
         .career-tab-content h4 {
@@ -220,8 +219,8 @@
         .btn-btn-primary{
             height: 48px;
             padding: 0 30px;
-            font-size: 18px;         
-            font-weight: 700;        
+            font-size: 18px;
+            font-weight: 700;
             border-radius: 8px;
         }
         .career-tab-section p {
@@ -231,7 +230,7 @@
             margin-bottom: 30px;
         }
         .career-item {
-            text-align: left;  
+            text-align: left;
             background: white;
             padding: 25px 30px;
             align-items: flex-start;
@@ -256,13 +255,13 @@
             color: #555;
             white-space: normal;
             overflow: visible;
-            text-align: left; 
+            text-align: left;
             text-overflow: unset;
             max-width: 100%;
             flex-wrap: nowrap;
         }
         .dropdown .btn-outline-primary {
-            border-radius: 999px; 
+            border-radius: 999px;
             padding: 6px 16px;
             font-weight: 600;
             font-size: 1rem;
@@ -285,7 +284,7 @@
             color: white;
         }
 
-        
+
 .career-heading{
     text-align: center;
 }
@@ -334,7 +333,7 @@
             border: 1px solid #ccc;
             background: #f8f8f8;
             cursor: pointer;
-            font-size: 1.5rem;      
+            font-size: 1.5rem;
             padding: 12px 32px;
             border-radius: 6px;
         }
@@ -347,13 +346,13 @@
         }
 
         .career-heading h1 {
-            font-size: 3rem;          
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .career-heading p {
-        font-size: 2rem;         
+        font-size: 2rem;
         max-width: 700px;
         margin: auto;
         line-height: 1.8;
@@ -456,7 +455,7 @@
 			color: #aaa;
             font-size: 1.5rem;
 		}
-        .file   
+        .file
 		{
             margin-left: 1rem;
 			width: 100%;
@@ -519,7 +518,7 @@
     .footer .credit {
         text-align: right;
     }
-    
+
     .footer .copyright {
         text-align: left;
     }
@@ -688,7 +687,7 @@
         color: #aaa;
         font-size: 1.5rem;
     }
-    .file   
+    .file
     {
         margin-left: 0;
         width: 100%;
@@ -782,5 +781,3 @@
 
 
 }
-
-

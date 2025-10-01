@@ -28,14 +28,14 @@
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html#home" data-i18n="home">Trang chủ</a></li>
-                <li><a href="index.html#about" data-i18n="about">Về chúng tôi</a></li>
-                <li><a href="index.html#service" data-i18n="services">Dịch vụ</a></li>
-                <li><a href="price.html" data-i18n="price">Bảng giá</a></li>
-                <li><a href="careers.html" data-i18n="careers">Cơ hội nghề nghiệp</a></li>
-				<li><a href="course.html" data-i18n="course">Khóa Học</a></li>
+                <li><a href="index.html#home" data-i18n="home">home</a></li>
+                <li><a href="index.html#about" data-i18n="about">about</a></li>
+                <li><a href="index.html#service" data-i18n="services">services</a></li>
+                <li><a href="price.html" data-i18n="price">Price</a></li>
+                <li><a href="careers.html" data-i18n="careers">career</a></li>
+                <li><a href="course.html" data-i18n="course">Khóa Học</a></li>
                 <li><a href="blog.html" data-i18n="blog">Blog Công Nghệ</a></li>
-                <li><a href="index.html#contact" data-i18n="contact">Liên hệ</a></li>
+                <li><a href="index.html#contact" data-i18n="contact">contact</a></li>
             </ul>
             <div class="dropdown ml-3">
                 <button class="btn btn-outline-primary dropdown-toggle lang-switcher" type="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -433,7 +433,7 @@
 			</div>
 
 			<div class="launch-button">
-      			<div class="label">ĐĂNG KÝ NGAY ĐỂ KHÔNG BỎ LỠ CƠ HỘI </div>
+			<a href="https://forms.gle/W487gAVLWTTx4Pk5A" style="color:white; text-decoration: none;" class="label">ĐĂNG KÝ NGAY ĐỂ KHÔNG BỎ LỠ CƠ HỘI </a>
 				<i class="fa fa-arrow-right" aria-hidden="true"></i>
     		</div>
 			</div>
@@ -471,7 +471,7 @@
   	<div id="contact" class="course-details">
     		<div class="contact-title">Cùng Eyecode, biến ý tưởng của bạn thành hiện thực.</div>
     		<div class="button-brand d-flex row gap-1">
-      			<div class="label">Liên hệ</div>
+			<a href="https://www.facebook.com/eyecodeedu" class="label" style="color:white; text-decoration: none;">Liên hệ</a>
 				<i class="fa fa-arrow-right" aria-hidden="true"></i>
     		</div>
   	</div>
@@ -561,6 +561,66 @@
           </div>
       </div>
   	</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script>
+	  const translations = {
+    en: {
+            "home": "Home",
+            "about": "About Us",
+            "services": "Our Services",
+            "price": "Price",
+            "careers": "Careers",
+            "course": "Course",
+            "blog": "Technology Blog",
+            "contact": "Contact",
+            "course": "Course"
+    },
+    vi: {
+        "home": "Trang chủ",
+        "about": "Về chúng tôi",
+        "services": "Dịch vụ",
+        "price": "Bảng giá",
+        "careers": "Cơ hội nghề nghiệp",
+        "course": "Khóa Học",
+        "blog": "Blog Công Nghệ",
+        "contact": "Liên hệ",
+        "course": "Khóa Học"
+    }};
+  function setLanguage(lang) {
+      localStorage.setItem('language', lang);
+      changeLanguage(lang);
+  }
+
+  function changeLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+              el.innerText = translations[lang][key];
+          }
+      });
+      const langDisplay = document.getElementById('lang-current');
+      if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = localStorage.getItem('language') || 'vi';
+    changeLanguage(savedLang);
+
+    const langDisplay = document.getElementById('lang-current');
+    if (langDisplay) langDisplay.innerText = savedLang.toUpperCase();
+
+    // Optional: Đảm bảo giữ lại trạng thái active cho dropdown
+    const langOptions = document.querySelectorAll('.dropdown-item');
+    langOptions.forEach(option => {
+        if (option.textContent.trim().toLowerCase() === savedLang.toLowerCase()) {
+            option.classList.add('active');
+        }
+    });
+});
+</script>
 
     <div class="floating-contact">
         <a href="https://wa.me/6598975989" class="fc-icon whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
