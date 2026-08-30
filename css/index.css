@@ -16,28 +16,6 @@
         .contact-form textarea {
             resize: vertical;
         }
-        .dropdown .dropdown-menu {
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            font-size: 1rem;
-        }
-        .dropdown .btn-outline-primary:hover {
-            background-color: #007bff;
-            color: white;
-        }
-        .dropdown .btn-outline-primary {
-            border-radius: 999px;
-            padding: 6px 16px;
-            font-weight: 600;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background-color: white;
-            color: #007bff;
-            border: 2px solid #007bff;
-            transition: all 0.3s ease;
-        }
         .contact-form button {
             border-radius: 25px;
         }.floating-contact {

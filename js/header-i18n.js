@@ -3,20 +3,20 @@
         en: {
             home: 'Home',
             about: 'About Us',
-            services: 'Our Services',
+            services: 'Expertise',
             careers: 'Careers',
             course: 'Training & Internship',
             blog: 'Technology Blog',
             contact: 'Contact'
         },
         vi: {
-            home: 'Trang chủ',
-            about: 'Giới thiệu',
-            services: 'Dịch vụ',
-            careers: 'Tuyển dụng',
-            course: 'Đào tạo & Thực tập',
-            blog: 'Blog Công nghệ',
-            contact: 'Liên hệ'
+            home: 'Trang Chủ',
+            about: 'Giới Thiệu',
+            services: 'Năng Lực',
+            careers: 'Tuyển Dụng',
+            course: 'Đào Tạo & Thực Tập',
+            blog: 'Blog Công Nghệ',
+            contact: 'Liên Hệ'
         }
     };
 
