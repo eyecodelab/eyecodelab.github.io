@@ -7,6 +7,8 @@
 .pain-points-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
 .program-card-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .program-btn.secondary{color:var(--navy);border-color:var(--navy);background:#fff}
+.info-grid a{overflow-wrap:anywhere}
+.final-cta small a{color:inherit;text-decoration:underline}
 .pain-points-grid article{padding:20px;border:1px solid var(--line);border-radius:7px;background:#fff}
 .pain-points-grid p{margin:0;color:#34435a;font-size:1.6rem;line-height:1.65}
 .pain-points-grid strong{color:var(--navy);font-weight:700}
