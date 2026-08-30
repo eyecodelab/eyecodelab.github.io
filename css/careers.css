@@ -10,25 +10,24 @@
 }
 
 /* Current Careers status and Training & Internship pathway. */
-.careers-overview{padding:36px 0 20px;text-align:center}
-.careers-title{margin:0 0 20px;color:#002e5f;font-size:3.2rem;font-weight:700}
-.research-internship-card,.training-career-card{padding:28px 30px;border-radius:8px}
-.research-internship-card{margin:0 auto 18px;border:1px solid #afc9e3;border-top:4px solid #002e5f;background:#fff;box-shadow:0 10px 26px rgba(0,46,95,.08)}
-.research-internship-card h2,.training-career-card h2{margin:0 0 10px;color:#002e5f;font-size:2.6rem;font-weight:700}
-.research-internship-card>p:not(.pathway-label),.training-career-card>p:not(.pathway-label):not(.pathway-clarification){margin:0 0 14px;color:#46566b;font-size:1.7rem;line-height:1.65}
-.research-selection{padding-top:2px;font-size:1.5rem!important}
-.pathway-label{margin:0 0 8px!important;color:#1464c0!important;font-size:1.25rem!important;font-weight:700;letter-spacing:.08em;text-transform:uppercase!important}
-.research-internship-cta,.training-program-cta{display:inline-block;padding:11px 20px;border-radius:5px;background:#0b5fb3;color:#fff!important;font-size:1.6rem;font-weight:600;text-decoration:none!important}
+.careers-overview{padding:36px 0 24px;text-align:center}
+.careers-title{margin:0 0 20px;color:#002e5f;font-size:clamp(36px,4vw,42px);font-weight:700}
+.research-internship-card,.training-career-card,.research-internship-card *,.training-career-card *{text-transform:none}
+.research-internship-card,.training-career-card{width:100%;max-width:960px;margin-right:auto;margin-left:auto;padding:40px;border:1px solid #c8d7e6;border-top:4px solid #1464c0;border-radius:10px;background:#fff;box-shadow:0 8px 22px rgba(0,46,95,.07)}
+.research-internship-card{margin-bottom:26px}
+.training-career-card{margin-bottom:48px}
+.research-internship-card h2,.training-career-card h2{margin:0 0 18px;color:#002e5f;font-size:clamp(28px,3vw,34px);font-weight:700;line-height:1.3}
+.research-internship-card>p:not(.pathway-label):not(.program-paid-note),.training-career-card>p:not(.pathway-label):not(.program-paid-note){margin:0 0 18px;color:#46566b;font-size:17px;line-height:1.65}
+.research-selection{padding-top:0;font-size:17px}
+.pathway-label{margin:0 0 12px;color:#1464c0;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase!important}
+.research-internship-cta,.training-program-cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;margin-top:6px;padding:11px 22px;border-radius:5px;background:#0b5fb3;color:#fff!important;font-size:17px;font-weight:600;line-height:1.3;text-decoration:none!important}
 .research-internship-cta:hover,.research-internship-cta:focus,.training-program-cta:hover,.training-program-cta:focus{background:#002e5f}
-.training-career-card{margin:0 auto 48px;border:1px solid #d6e0ea;border-left:5px solid #1464c0;background:#f7f9fb}
-.training-career-card h2{margin:0 0 10px;color:#002e5f;font-size:2.6rem;font-weight:700}
-.training-career-card>p{margin:0 0 18px;color:#46566b;font-size:1.7rem;line-height:1.65}
-.training-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:0 0 22px;padding:0;list-style:none}
-.training-highlights li{position:relative;padding-left:18px;color:#263a53;font-size:1.5rem}
+.training-highlights{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin:0 0 22px;padding:0;list-style:none}
+.training-highlights li{position:relative;padding-left:20px;color:#263a53;font-size:16px;line-height:1.55}
 .training-highlights li::before{content:'';position:absolute;top:.75em;left:0;width:7px;height:7px;border-radius:50%;background:#1464c0}
-.pathway-clarification{margin:14px 0 0!important;color:#5d6b7b!important;font-size:1.35rem!important;line-height:1.55!important}
+.program-paid-note{margin:16px 0 0;color:#5d6b7b;font-size:14px;line-height:1.55}
 .form-placeholder-link[aria-disabled=true]{cursor:not-allowed;opacity:.72}
-@media(max-width:600px){.careers-overview{padding:28px 0 16px}.research-internship-card,.training-career-card{padding:24px 20px}.training-career-card{margin-bottom:36px}.training-highlights{grid-template-columns:1fr;gap:8px}.research-internship-cta,.training-program-cta{display:block;text-align:center}}
+@media(max-width:600px){.careers-overview{padding:28px 0 18px}.careers-title{font-size:34px}.research-internship-card,.training-career-card{padding:26px 20px}.training-career-card{margin-bottom:36px}.research-internship-card h2,.training-career-card h2{font-size:26px}.training-highlights{grid-template-columns:1fr;gap:10px}.research-internship-cta,.training-program-cta{display:flex;width:100%;padding-right:16px;padding-left:16px;text-align:center;overflow-wrap:anywhere}.program-paid-note{font-size:14px}}
 
         /* .form-container {
             background: #fff;
