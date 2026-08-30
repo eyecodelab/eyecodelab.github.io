@@ -16,10 +16,14 @@ body .header .dropdown-menu{border-radius:12px;box-shadow:0 8px 16px rgba(0,0,0,
 /* Canonical site footer shared by all public pages. */
 .site-footer,.site-footer *{text-transform:none}
 .site-footer{background:#001f40;color:#cad8e7;font-family:'Roboto',sans-serif}
-.site-footer-inner{display:grid;grid-template-columns:2fr 1fr 1.5fr;gap:48px;width:min(1120px,calc(100% - 40px));margin:0 auto;padding:42px 0 34px}
-.site-footer-brand p{margin:0;color:#fff;font-size:1.7rem;font-weight:600}
-.site-footer h2{margin:0 0 12px;color:#fff;font-size:1.8rem;font-weight:600}
-.site-footer a{display:block;width:max-content;max-width:100%;margin:5px 0;color:#cad8e7;font-size:1.5rem;text-decoration:none;overflow-wrap:anywhere}
+.site-footer-main{display:grid;grid-template-columns:minmax(180px,1.2fr) minmax(150px,.8fr) minmax(280px,1.4fr) minmax(200px,1fr);align-items:start;gap:40px 56px;width:min(1200px,calc(100% - 40px));margin:0 auto;padding:44px 0 40px}
+.site-footer-brand p{margin:0;color:#fff;font-size:16px;font-weight:600;line-height:1.55}
+.site-footer h2{margin:0 0 12px;color:#fff;font-size:16px;font-weight:700;line-height:1.4}
+.site-footer a{display:block;width:max-content;max-width:100%;margin:5px 0;color:#cad8e7;font-size:15px;line-height:1.5;text-decoration:none;overflow-wrap:anywhere}
 .site-footer a:hover,.site-footer a:focus{color:#fff;text-decoration:underline}
-.site-footer-bottom{padding:14px 20px;border-top:1px solid rgba(255,255,255,.15);color:#cad8e7;font-size:1.3rem;text-align:center}
-@media(max-width:768px){.site-footer-inner{grid-template-columns:1fr;gap:20px;width:min(100% - 28px,1120px);padding:30px 0 26px}}
+.footer-office-item+.footer-office-item{margin-top:14px}
+.footer-office-item strong{display:block;margin-bottom:3px;color:#fff;font-size:15px;font-weight:600;line-height:1.45}
+.footer-office-item p{margin:0;color:#cad8e7;font-size:15px;line-height:1.55}
+.site-footer-bottom{padding:16px 20px;border-top:1px solid rgba(255,255,255,.15);color:#cad8e7;font-size:13px;line-height:1.5;text-align:center}
+@media(max-width:1024px){.site-footer-main{grid-template-columns:1fr 1fr;gap:32px 48px}}
+@media(max-width:600px){.site-footer-main{grid-template-columns:1fr;gap:24px;width:min(100% - 32px,1200px);padding:36px 0 32px}}
