@@ -33,6 +33,7 @@
     <script src="https://unpkg.com/jquery-i18next@1.2.1/dist/umd/jquery-i18next.min.js"></script> -->
 
 
+<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
     <header class="header">
@@ -43,21 +44,20 @@
                 <li><a href="index.html#home" data-i18n="home">home</a></li>
                 <li><a href="index.html#about" data-i18n="about">about</a></li>
                 <li><a href="index.html#service" data-i18n="services">services</a></li>
-                <li><a href="price.html" data-i18n="price">Price</a></li>
+
                 <li><a href="careers.html" data-i18n="careers">career</a></li>
-                <li><a href="course.html" data-i18n="course">Khóa Học</a></li>
+                <li><a href="course.html" data-i18n="course">Training &amp; Internship</a></li>
                 <li><a href="blog.html" data-i18n="blog">Blog Công Nghệ</a></li>
                 <li><a href="index.html#contact" data-i18n="contact">contact</a></li>
-                <!-- <li><a href="index.html#faq">FAQ</a></li> -->
             </ul>
             <div class="dropdown ml-3">
-              <button class="btn btn-outline-primary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-globe"></i> <span id="lang-current"></span>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                <a class="dropdown-item" href="#" onclick="setLanguage('en')">EN</a>
-                <a class="dropdown-item" href="#" onclick="setLanguage('vi')">VI</a>
-              </div>
+                <button class="btn btn-outline-primary dropdown-toggle lang-switcher" type="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i> <span id="lang-current">VI</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('vi')">VI</a>
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a>
+                </div>
             </div>
 
 
@@ -71,22 +71,31 @@
 
     <div class="career-container">
 
-    <section id="career-heading" class="career-heading" style="text-align: center; margin-bottom: 2rem;">
-        <h1 class="heading" data-i18n="career-title" >Career</h1>
-        <p style="max-width: 600px; margin: auto;" data-i18n="career-sub" >
-            We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.
-        </p>
+    <section id="career-heading" class="career-heading careers-overview">
+        <h1 class="careers-title" data-i18n="career-title">Career Opportunities</h1>
     </section>
 
-    <!-- Tabs -->
-    <div class="career-tabs" style="text-align: center; margin-bottom: 2rem;">
-        <button onclick="showSection('intern')" style="padding: 10px 20px;" id="tab-intern" class="active-tab">Internship</button>
-        <button onclick="showSection('fulltime')" style="padding: 10px 20px;" id="tab-fulltime">Full-time</button>
-    </div>
+    <section class="research-internship-card" aria-labelledby="research-internship-title">
+        <p class="pathway-label" data-i18n="research-pathway-label">Direct Recruitment</p>
+        <h2 id="research-internship-title" data-i18n="research-title">AI &amp; Robotics Research Internship</h2>
+        <p data-i18n="research-desc">For candidates with a strong background in AI, Computer Vision, Robotics or related fields who are ready to contribute directly to EyeCode Tech research projects.</p>
+        <p class="research-selection" data-i18n="research-selection">Candidates are selected based on their background, technical skills, research experience and project fit.</p>
+        <a href="#research-internship-form-pending" class="research-internship-cta form-placeholder-link" data-form-key="researchInternship" data-i18n="research-cta">Apply for Research Internship</a>
+    </section>
 
-    <!-- Internship Section -->
-    <div id="intern" class="job-section">
-        <h2 data-i18n="intern-title"  >Internship Positions</h2>
+    <section class="training-career-card" aria-labelledby="training-career-title">
+        <p class="pathway-label" data-i18n="training-pathway-label">Structured 8-Week Program</p>
+        <h2 id="training-career-title" data-i18n="program-heading">Looking for a Structured Path into AI Research?</h2>
+        <p data-i18n="program-desc">Explore our 8-week AI &amp; Robotics Research Training + Internship Program combining research training, real projects, weekly mentoring and internship experience at EyeCode Tech.</p>
+        <ul class="training-highlights">
+            <li data-i18n="program-highlight-training">AI Research Training &amp; Methodology</li>
+            <li data-i18n="program-highlight-project">Real Research Projects</li>
+            <li data-i18n="program-highlight-mentoring">Weekly Mentoring &amp; Project Review</li>
+            <li data-i18n="program-highlight-confirmation">Internship Documentation Support Upon Program Completion</li>
+        </ul>
+        <a href="ai-research-program.html" class="training-program-cta" data-i18n="program-cta">View Training &amp; Internship Program</a>
+        <p class="pathway-clarification" data-i18n="program-clarification">Candidates with a strong background may apply directly for the Research Internship without joining the training program.</p>
+    </section>
 
             <!-- <div class="job-card" id="marketing-intern">
             <h3>Marketing / Content Creation</h3>
@@ -101,11 +110,6 @@
         </div>
  -->
 
-            <div class="job-card" id="ai-research-intern">
-            <h3>AI Research Intern</h3>
-            <p data-i18n="intern-AI-Research" >Join our AI research team working on Computer Vision, Robotics, Deep Learning, and Vision-Language Models, with opportunities to contribute to real research projects and publications.</p>
-            <a href="https://forms.gle/VfPsoUFrkfNuPFfb6" target="_blank" class="apply-btn">Apply</a>
-        </div>
         <!-- <div class="job-card" id="web-dev-stack">
             <h3>Web Development (Front-End / Back-End / Full-Stack)</h3>
             <p  data-i18n="intern-web-desc" >Build scalable web systems using React, Node.js, Django, MongoDB.</p>
@@ -155,26 +159,6 @@
 
 
 
-    </div>
-
-
-    <!-- Full-time Section (optional placeholder) -->
-    <div id="fulltime" class="job-section" style="display: none;">
-        <h2>Full-time Positions</h2>
-
-            <p style="font-size: 1.7rem; color: #555; padding: 20px 0;" data-i18n= "fulltime-desc" >
-            Currently, there are no full-time openings. Positions will be published when available.
-        </p>
-
-        <!-- <div class="job-card" id="web-developer-fulltime">
-
-            <h3>Web Developer (Full-time)</h3>
-            <p>Build, maintain, and scale production-grade systems using React/Django.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePamUVpyjtpspPYmfw6_6-dPpdCr71zi-RGmMaAWHe0xBYvw/viewform" target="_blank" class="apply-btn">Apply</a>
-        </div> -->
-
-
-    </div>
     </div>
 
     <div class="footer">
@@ -296,8 +280,21 @@
 //   });
 const translations = {
     en: {
-        "career-title": "Career",
-        "career-sub": "We’re building the future of AI, and we’re looking for passionate individuals to grow with us. Explore your next opportunity below.",
+        "career-title": "Career Opportunities",
+        "research-pathway-label": "DIRECT RECRUITMENT",
+        "research-title": "AI & Robotics Research Internship",
+        "research-desc": "For candidates with a strong background in AI, Computer Vision, Robotics or related fields who are ready to contribute directly to EyeCode Tech research projects.",
+        "research-selection": "Candidates are selected based on their background, technical skills, research experience and project fit.",
+        "research-cta": "Apply for Research Internship",
+        "training-pathway-label": "Structured 8-Week Program",
+        "program-heading": "Looking for a Structured Path into AI Research?",
+        "program-desc": "Explore our 8-week AI & Robotics Research Training + Internship Program combining research training, real projects, weekly mentoring and internship experience at EyeCode Tech.",
+        "program-highlight-training": "AI Research Training & Methodology",
+        "program-highlight-project": "Real Research Projects",
+        "program-highlight-mentoring": "Weekly Mentoring & Project Review",
+        "program-highlight-confirmation": "Internship Documentation Support Upon Program Completion",
+        "program-cta": "View Training & Internship Program",
+        "program-clarification": "Candidates with a strong background may apply directly for the Research Internship without joining the training program.",
         "internship": "Internship",
         "fulltime": "Full-time",
         "apply": "Apply",
@@ -306,7 +303,7 @@ const translations = {
         "services": "Our Services",
         "price": "Price",
         "careers": "Careers",
-        "course": "Course",
+        "course": "Training & Internship",
         "fulltime-desc" : "Currently, there are no full-time openings. Positions will be published when available.",
         "blog": "Technology Blog",
         "contact": "Contact",
@@ -337,10 +334,23 @@ const translations = {
         "careers": "Cơ hội nghề nghiệp",
         "blog": "Blog Công Nghệ",
         "contact": "Liên hệ",
-        "course": "Khóa Học",
+        "course": "Training & Internship",
         "fulltime-desc" : "Hiện tại, Chúng tôi không có mở tuyển dụng vị trí toàn thời gian. Vị trí sẽ được công bố khi có sẵn.",
         "career-title": "Cơ hội nghề nghiệp",
-        "career-sub": "Chúng tôi đang xây dựng tương lai AI và tìm kiếm những cá nhân đam mê để cùng phát triển. Khám phá cơ hội tiếp theo của bạn dưới đây.",
+        "research-pathway-label": "TUYỂN CHỌN TRỰC TIẾP",
+        "research-title": "AI & Robotics Research Internship",
+        "research-desc": "Dành cho các ứng viên có nền tảng tốt về AI, Computer Vision, Robotics hoặc các lĩnh vực liên quan và mong muốn tham gia trực tiếp vào các research projects của EyeCode Tech.",
+        "research-selection": "Ứng viên được lựa chọn dựa trên background, technical skills, research experience và mức độ phù hợp với project.",
+        "research-cta": "Ứng Tuyển Research Internship",
+        "training-pathway-label": "Chương trình theo lộ trình 8 tuần",
+        "program-heading": "Bạn Muốn Được Đào Tạo Và Trải Nghiệm AI Research Theo Lộ Trình Có Cấu Trúc?",
+        "program-desc": "Khám phá AI & Robotics Research Training + Internship Program kéo dài 8 tuần, kết hợp research training, project thực tế, weekly mentoring và internship tại EyeCode Tech.",
+        "program-highlight-training": "AI Research Training & Methodology",
+        "program-highlight-project": "Research Project Thực Tế",
+        "program-highlight-mentoring": "Weekly Mentoring & Project Review",
+        "program-highlight-confirmation": "Hỗ Trợ Xác Nhận Quá Trình Thực Tập Sau Khi Hoàn Thành Yêu Cầu Chương Trình",
+        "program-cta": "Xem Chương Trình Đào Tạo & Thực Tập",
+        "program-clarification": "Sinh viên có background tốt có thể ứng tuyển trực tiếp vào Research Internship mà không cần tham gia chương trình đào tạo.",
         "internship": "Thực tập",
         "fulltime": "Toàn thời gian",
         "apply": "Ứng tuyển",
@@ -383,24 +393,6 @@ const translations = {
         const langDisplay = document.getElementById('lang-current');
         if (langDisplay) langDisplay.innerText = lang.toUpperCase();
     }
-
-    function showSection(section) {
-        document.getElementById('intern').style.display = section === 'intern' ? 'block' : 'none';
-        document.getElementById('fulltime').style.display = section === 'fulltime' ? 'block' : 'none';
-        document.getElementById('tab-intern').classList.toggle('active-tab', section === 'intern');
-        document.getElementById('tab-fulltime').classList.toggle('active-tab', section === 'fulltime');
-    }
-
-    document.querySelectorAll('.job-card').forEach(card => {
-        card.addEventListener('click', function () {
-            const id = this.id;
-            if (history.pushState) {
-                history.pushState(null, null, '#' + id);
-            } else {
-                location.hash = '#' + id;
-            }
-        });
-    });
 
     document.addEventListener("DOMContentLoaded", function () {
         const urlParams = new URLSearchParams(window.location.search);
@@ -509,5 +501,7 @@ const translations = {
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="js/header-i18n.js"></script>
+<script src="js/program-forms.js"></script>
 </body>
 </html>

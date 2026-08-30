@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EyeCode | AI & Smart Tech Hub</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/careers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -26,6 +27,8 @@
         display: block;
         }
     </style>
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/header-i18n.js"></script>
 </head>
 <body>
     <header class="header">
@@ -33,15 +36,24 @@
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html#home">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <!-- <li><a href="index.html#portfolio">portfolio</a></li>
-                <li><a href="index.html#team">team</a></li> -->
-                <li><a href="careers.html">career</a></li>
-                <li><a href="index.html#contact">contact</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="index.html#home" data-i18n="home">home</a></li>
+                <li><a href="index.html#about" data-i18n="about">about</a></li>
+                <li><a href="index.html#service" data-i18n="services">services</a></li>
+
+                <li><a href="careers.html" data-i18n="careers">career</a></li>
+                <li><a href="course.html" data-i18n="course">Training &amp; Internship</a></li>
+                <li><a href="blog.html" data-i18n="blog">Blog Công Nghệ</a></li>
+                <li><a href="index.html#contact" data-i18n="contact">contact</a></li>
             </ul>
+            <div class="dropdown ml-3">
+                <button class="btn btn-outline-primary dropdown-toggle lang-switcher" type="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i> <span id="lang-current">VI</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('vi')">VI</a>
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a>
+                </div>
+            </div>
         </nav>
     </header>
 

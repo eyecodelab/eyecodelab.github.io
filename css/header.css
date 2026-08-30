@@ -1,0 +1,12 @@
+/* Canonical site header, based on the homepage implementation. */
+body .header{align-items:center;min-height:5.8rem;padding:1rem 2rem}
+body .header .logo img{width:130%;height:3rem;object-fit:contain}
+body .header .navbar ul{margin-bottom:0}
+body .header .navbar ul li{margin:0 1.5rem}
+body .header .navbar ul li a{font-family:'Roboto',sans-serif;font-size:2rem;font-weight:400;line-height:normal;letter-spacing:normal;white-space:nowrap}
+body .header .navbar ul li a.nav-active{color:#00bfff;text-decoration:underline}
+body .header .navbar .dropdown{display:flex;align-items:center;margin-left:16px;margin-top:-15px}
+body .header .lang-switcher{display:flex;align-items:center;gap:8px;padding:6px 16px;border:2px solid #007bff;border-radius:999px;background:#fff;color:#007bff;font-size:1rem;font-weight:600;line-height:1.5}
+body .header .lang-switcher:hover,body .header .lang-switcher:focus{background:#007bff;color:#fff}
+body .header .dropdown-menu{border-radius:12px;box-shadow:0 8px 16px rgba(0,0,0,.1);font-size:1rem}
+@media(max-width:1000px){body .header .logo img{width:20%;height:3rem}body .header .navbar ul li{margin:1rem 0}body .header .navbar ul li a{color:grey;font-size:2.4rem}body .header .navbar .dropdown{justify-content:center;margin:1rem 0 1.5rem}}
