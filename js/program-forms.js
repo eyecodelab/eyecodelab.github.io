@@ -22,4 +22,30 @@
             event.preventDefault();
         });
     });
+
+    if (document.body.classList.contains('ai-program-page')) {
+        document.querySelectorAll('[data-form-key="trainingInternship"]').forEach(function (link) {
+            if (link.dataset.gaApplyTracked === 'true') return;
+            link.dataset.gaApplyTracked = 'true';
+
+            link.addEventListener('click', function () {
+                const query = new URLSearchParams(window.location.search);
+                const eventParameters = {
+                    program: 'ai_research_sep2026',
+                    page_path: window.location.pathname,
+                    link_url: link.href,
+                    utm_source: query.get('utm_source') || '',
+                    utm_medium: query.get('utm_medium') || '',
+                    utm_campaign: query.get('utm_campaign') || '',
+                    utm_content: query.get('utm_content') || ''
+                };
+                const sendEvent = typeof window.gtag === 'function' ? window.gtag : function () {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push(arguments);
+                };
+
+                sendEvent('event', 'apply_click', eventParameters);
+            });
+        });
+    }
 }());
