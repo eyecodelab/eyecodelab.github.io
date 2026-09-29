@@ -36,6 +36,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <script src="./js/main.js"></script>
+    <script src="./js/program-cohorts.js"></script>
 <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
@@ -150,7 +151,7 @@
     <p class="homepage-program-description" data-i18n="program-description">Chương trình 8 tuần kết hợp AI Research Training, research project thực tế, weekly mentoring và internship tại EyeCode Tech.</p>
     <p class="homepage-program-support" data-i18n="program-support">Dành cho sinh viên muốn phát triển kỹ năng AI &amp; Robotics Research, xây dựng project/portfolio và chuẩn bị cho internship, career trong và ngoài nước hoặc định hướng Master/PhD.</p>
     <p class="homepage-program-meta" data-i18n="program-meta">8 tuần | Research Project | Weekly Mentoring | Onsite / Hybrid / Online</p>
-    <p class="homepage-program-date" data-i18n="program-date">Khai giảng dự kiến: 21/09/2026</p>
+    <p class="homepage-program-date" data-i18n="program-date" data-cohort-homepage-date>Khai giảng dự kiến: <span data-cohort-date>—</span></p>
     <div class="homepage-program-actions"><a class="homepage-program-primary" href="ai-research-program.html" data-i18n="program-primary">Xem chương trình</a><a class="homepage-program-secondary" href="course.html" data-i18n="program-secondary">Xem tất cả Training &amp; Internship</a></div>
   </div>
 </section>
@@ -295,7 +296,7 @@
             "program-description": "An 8-week program combining AI Research Training, real research projects, weekly mentoring and internship experience at EyeCode Tech.",
             "program-support": "For students who want to develop AI & Robotics Research skills, build projects and portfolios, and prepare for internships, careers locally or internationally, or Master/PhD study.",
             "program-meta": "8 weeks | Research Project | Weekly Mentoring | Onsite / Hybrid / Online",
-            "program-date": "Expected start date: 21/09/2026",
+            "program-date": "Expected start date:",
             "program-primary": "View Program",
             "program-secondary": "View all Training & Internship",
             "contact-section-heading": "Get In Touch",
@@ -352,7 +353,7 @@
         "program-description": "Chương trình 8 tuần kết hợp AI Research Training, research project thực tế, weekly mentoring và internship tại EyeCode Tech.",
         "program-support": "Dành cho sinh viên muốn phát triển kỹ năng AI & Robotics Research, xây dựng project/portfolio và chuẩn bị cho internship, career trong và ngoài nước hoặc định hướng Master/PhD.",
         "program-meta": "8 tuần | Research Project | Weekly Mentoring | Onsite / Hybrid / Online",
-        "program-date": "Khai giảng dự kiến: 21/09/2026",
+        "program-date": "Khai giảng dự kiến:",
         "program-primary": "Xem chương trình",
         "program-secondary": "Xem tất cả Training & Internship",
         "contact-section-heading": "Liên hệ",
@@ -372,6 +373,12 @@
               el.innerText = translations[lang][key];
           }
       });
+        const homepageProgramDate = document.querySelector('[data-cohort-homepage-date]');
+        if (homepageProgramDate && window.EyeCodeProgramCohorts) {
+          const cohort = window.EyeCodeProgramCohorts.getAdvertisedCohort();
+            const label = lang === 'en' ? 'Expected start date: ' : 'Khai giảng dự kiến: ';
+            homepageProgramDate.innerHTML = label + '<span data-cohort-date>' + cohort.displayDate + '</span>';
+        }
       const langDisplay = document.getElementById('lang-current');
       if (langDisplay) langDisplay.innerText = lang.toUpperCase();
   }

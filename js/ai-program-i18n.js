@@ -3,7 +3,7 @@
         vi: {
             'program-register': 'Đăng ký tham gia',
             'program-view': 'Xem chương trình',
-            'tuition-heading': 'Học phí – Khóa 09/2026',
+            'tuition-heading': 'Học phí – Khóa {cohort}',
             'tuition-individual-label': 'Individual',
             'tuition-individual-price': '3.500.000 VNĐ/người',
             'tuition-group-label': 'Group of 3',
@@ -23,7 +23,7 @@
         en: {
             'program-register': 'Register Now',
             'program-view': 'View Program',
-            'tuition-heading': 'Tuition – September 2026 Cohort',
+            'tuition-heading': 'Tuition – {cohort} Cohort',
             'tuition-individual-label': 'Individual',
             'tuition-individual-price': '3,500,000 VND/person',
             'tuition-group-label': 'Group of 3',
@@ -46,8 +46,14 @@
     window.changeLanguage = function (lang) {
         const selectedLanguage = programTranslations[lang] ? lang : 'vi';
         if (typeof existingChangeLanguage === 'function') existingChangeLanguage(selectedLanguage);
+        const cohort = window.EyeCodeProgramCohorts
+            ? window.EyeCodeProgramCohorts.getAdvertisedCohort()
+            : null;
         document.querySelectorAll('[data-program-i18n]').forEach(function (element) {
-            const value = programTranslations[selectedLanguage][element.dataset.programI18n];
+            let value = programTranslations[selectedLanguage][element.dataset.programI18n];
+            if (value && cohort && element.dataset.programI18n === 'tuition-heading') {
+                value = value.replace('{cohort}', cohort.monthYear);
+            }
             if (value) element.innerHTML = value;
         });
     };

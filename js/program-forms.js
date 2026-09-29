@@ -30,8 +30,11 @@
 
             link.addEventListener('click', function () {
                 const query = new URLSearchParams(window.location.search);
+                const cohort = window.EyeCodeProgramCohorts
+                    ? window.EyeCodeProgramCohorts.getAdvertisedCohort()
+                    : null;
                 const eventParameters = {
-                    program: 'ai_research_sep2026',
+                    program: cohort ? cohort.analyticsId : 'ai_research_training_internship',
                     page_path: window.location.pathname,
                     link_url: link.href,
                     utm_source: query.get('utm_source') || '',
