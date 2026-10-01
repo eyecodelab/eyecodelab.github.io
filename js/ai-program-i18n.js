@@ -1,6 +1,14 @@
 (function () {
     const programTranslations = {
         vi: {
+            "cohort-preview-eyebrow": "INSIDE THE PROGRAM",
+            "cohort-preview-title": "Một số nội dung từ Cohort 09/26",
+            "cohort-preview-subtitle": "Xem một số slide training thực tế trong chương trình",
+            "cohort-previous": "Slide trước",
+            "cohort-next": "Slide tiếp theo",
+            "cohort-slide-cover": "Slide 1: Giới thiệu Cohort 09/26",
+            "cohort-slide-overview": "Slide 2: Tổng quan chương trình",
+            "cohort-slide-workflow": "Slide 3: Quy trình nghiên cứu",
             "audience-eyebrow": "Giới thiệu",
             "audience-heading": "Chương trình dành cho ai?",
             "audience-description": "Dành cho sinh viên muốn tìm hiểu AI Research hoặc ứng dụng AI vào lĩnh vực của mình. Không yêu cầu kinh nghiệm research trước đó.",
@@ -117,6 +125,14 @@
             'pain-6': 'Có định hướng phát triển <strong>career trong và ngoài nước hoặc học Master/PhD</strong> nhưng chưa biết nên chuẩn bị <strong>CV, portfolio và research profile</strong> như thế nào?'
         },
         en: {
+            "cohort-preview-eyebrow": "INSIDE THE PROGRAM",
+            "cohort-preview-title": "Inside Cohort 09/26",
+            "cohort-preview-subtitle": "A look at some training slides from the current program",
+            "cohort-previous": "Previous slide",
+            "cohort-next": "Next slide",
+            "cohort-slide-cover": "Slide 1: Cohort 09/26 cover",
+            "cohort-slide-overview": "Slide 2: Program overview",
+            "cohort-slide-workflow": "Slide 3: Research workflow",
             "audience-eyebrow": "Introduction",
             "audience-heading": "Who Is This Program For?",
             "audience-description": "For students who want to explore AI Research or apply AI in their field. No prior research experience is required.",
