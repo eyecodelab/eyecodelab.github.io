@@ -1,6 +1,7 @@
 (function () {
     const programTranslations = {
         vi: {
+            'messenger-consultation': 'Nhắn tin để được tư vấn',
             'program-register': 'Đăng ký tham gia',
             'program-view': 'Xem chương trình',
             'tuition-heading': 'Học phí – Khóa {cohort}',
@@ -21,6 +22,7 @@
             'pain-6': 'Có định hướng phát triển <strong>career trong và ngoài nước hoặc học Master/PhD</strong> nhưng chưa biết nên chuẩn bị <strong>CV, portfolio và research profile</strong> như thế nào?'
         },
         en: {
+            'messenger-consultation': 'Message us for consultation',
             'program-register': 'Register Now',
             'program-view': 'View Program',
             'tuition-heading': 'Tuition – {cohort} Cohort',

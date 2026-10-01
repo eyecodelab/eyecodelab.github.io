@@ -18,49 +18,6 @@
         }
         .contact-form button {
             border-radius: 25px;
-        }.floating-contact {
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .fc-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-        .fc-icon img {
-            width: 28px;
-            height: 28px;
-        }
-
-        .fc-icon i {
-            font-size: 22px;
-        }
-
-        .fc-icon.call {
-            background-color: #ff6600;
-            color: white;
-        }
-
-        .fc-icon.messenger {
-            background-color: #0084ff;
-            color: white;
-        }
-
-        .fc-icon.zalo {
-            background-color: #ffffff;
-            border: 1px solid #0084ff;
         }
         .btn-always-glow {
             background-color: #0d305e;
