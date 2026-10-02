@@ -39,7 +39,7 @@ $(document).ready(function () {
         autoplayTimer = window.setTimeout(function () {
             carousel.trigger('next.owl.carousel');
             resetAutoplay();
-        }, 5000);
+        }, 4000);
     }
 
     container.on('mouseenter', function () {
