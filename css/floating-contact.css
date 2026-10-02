@@ -57,6 +57,9 @@
     line-height: 1.4;
     text-transform: none;
 }
+.floating-contact--consultation .fc-label {
+    white-space: nowrap;
+}
 .floating-contact--consultation .fc-icon:hover,
 .floating-contact--consultation .fc-icon:focus-visible {
     background-color: #1464c0;
