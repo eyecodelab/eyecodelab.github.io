@@ -801,3 +801,7 @@
 
 
 }
+
+/* Keep career anchor targets below the fixed navigation. */
+.research-internship-card,.training-career-card{scroll-margin-top:100px}
+@media(max-width:1000px){.research-internship-card,.training-career-card{scroll-margin-top:84px}}
