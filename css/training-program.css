@@ -65,3 +65,9 @@
 /* Responsive real-robot research video. */
 .robotics-video{width:100%;max-width:800px;margin:0 auto;aspect-ratio:16/9;border:1px solid var(--line);border-radius:10px;background:var(--navy);box-shadow:0 8px 24px rgba(0,46,95,.09);overflow:hidden}
 .robotics-video iframe{display:block;width:100%;height:100%;border:0}
+
+/* Match the fixed header heights in header.css for section and heading anchors. */
+.ai-program-page{--program-nav-height:76px}
+.ai-program-page .robotics-research,.ai-program-page #robotics-research-heading{scroll-margin-top:var(--program-nav-height)}
+@media(max-width:1000px){.ai-program-page{--program-nav-height:66px}}
+@media(max-width:767px){.ai-program-page{--program-nav-height:64px}}
